@@ -1,0 +1,78 @@
+{
+  "pageTitle": "Ateliers Nature & Jardin",
+  "pageSubtitle": "Ve'j'tal · Milélé · Forêt normande",
+  "introEyebrow": "Le projet Ve'j'tal",
+  "introTitle": "Un terrain de 2 500 m²\nau cœur de la forêt normande",
+  "introText": "Après 15 ans de réflexion, Océane et Jérémy (paysagiste depuis 2016) ont acquis en février 2025 un terrain baptisé \"Milélé\" en forêt normande. Ce lieu ouvre ses portes à l'été 2026 pour des ateliers de reconnexion à la nature. Tous les ateliers sont co-animés par Océane et Jérémy — entre savoir-faire du soin et expertise du vivant végétal, un tandem unique au service de votre bien-être.",
+  "items": [
+    {
+      "title": "Atelier Bien-être",
+      "price": "80€",
+      "priceUnit": "/personne",
+      "desc": "Sport, méditation, relaxation et massages. Journée de 9h à 17h avec déjeuner végétarien.",
+      "date": "📅 27 juin · 18 juillet · 5 sept. 2026"
+    },
+    {
+      "title": "Week-end Nature",
+      "price": "150€",
+      "priceUnit": "/2 jours",
+      "desc": "Randonnée, création intuitive, écriture, dessin, méditation, feu de camp et nuit en tente.",
+      "date": "📅 15–16 août 2026"
+    },
+    {
+      "title": "Atelier Balade Nature",
+      "price": "60€",
+      "priceUnit": "adulte · 20€ enfant",
+      "desc": "Jeux en plein air, randonnée, connexion à la nature, découverte des plantes comestibles.",
+      "date": "📅 6 juin 2026"
+    },
+    {
+      "title": "Atelier Jardin",
+      "price": "60€",
+      "priceUnit": "/personne",
+      "desc": "Compostage, potager, taille, techniques durables et respectueuses de l'environnement.",
+      "date": "📅 17 mai · 21 juin 2026"
+    },
+    {
+      "title": "Atelier Déco Nature",
+      "price": "60€",
+      "priceUnit": "/personne",
+      "desc": "Création avec matériaux naturels, land art et expression artistique au fil de l'imagination.",
+      "date": "📅 30 mai · 28 juin 2026"
+    },
+    {
+      "title": "Apaiser le Cœur",
+      "price": "60€",
+      "priceUnit": "/personne",
+      "desc": "Relaxation en forêt, création d'une statue Jizo, exercices en binôme, cérémonie cacao.",
+      "date": "📅 8 août 2026"
+    },
+    {
+      "title": "Connexion à Soi",
+      "price": "60€",
+      "priceUnit": "/personne",
+      "desc": "Massage, soins énergétiques, exercices d'écriture des ombres et méditation guidée.",
+      "date": "📅 23 mai 2026"
+    },
+    {
+      "title": "Connexion à la Nature",
+      "price": "60€",
+      "priceUnit": "/personne",
+      "desc": "Marche sensorielle, méditation en forêt, travail créatif, connexion aux éléments naturels.",
+      "date": "📅 20 juin 2026"
+    },
+    {
+      "title": "Connexion à l'Autre",
+      "price": "60€",
+      "priceUnit": "/personne",
+      "desc": "Initiation aux soins énergétiques, écoute intuitive, exercices de confiance et travail en binôme.",
+      "date": "📅 11 juillet 2026"
+    }
+  ],
+  "promo": {
+    "title": "Offre Trio Connexion",
+    "text": "Inscrivez-vous aux 3 ateliers \"Connexion\" (à Soi · à la Nature · à l'Autre)\net bénéficiez d'un tarif préférentiel.",
+    "priceBefore": "180€",
+    "priceAfter": "150€"
+  }
+}

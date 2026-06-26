@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "eyebrow": "Le Havre · Normandie",
+    "title": "Instant Douce'Heure",
+    "subtitle": "Massages de bien-être · Soins énergétiques\nProduits naturels & bio · Retraites et ateliers en pleine nature",
+    "ctaPrimary": "Prendre rendez-vous",
+    "ctaSecondary": "Voir les soins",
+    "badgeNumber": "+15",
+    "badgeLabel": "ans de\npassion"
+  },
+  "services": {
+    "eyebrow": "Nos soins",
+    "title": "Un accompagnement\nsur mesure pour vous",
+    "subtitle": "Chaque séance est pensée pour répondre à vos besoins du moment — corps, énergie et esprit.",
+    "cards": [
+      {
+        "title": "Massage Holistique",
+        "desc": "Séances sur mesure adaptées à vos besoins du moment. Sélection d'huiles selon votre type de peau et votre personnalité. Prise en charge de la grossesse dès 3 mois et du post-partum.",
+        "price": "À partir de 35€ · 30 min",
+        "cta": "Voir les tarifs"
+      },
+      {
+        "title": "Soin Énergétique",
+        "desc": "Méthode inspirée du Chin Daï, art martial transmis par Renato Pappalardo. Travail sur les centres et circuits énergétiques pour soutenir votre santé mentale, physique et intuitive.",
+        "price": "75€ · 1h15",
+        "cta": "En savoir plus"
+      },
+      {
+        "title": "Soin Rituel Rebozo",
+        "desc": "Soin cérémoniel mexicain traditionnel de 2h30. Massage à quatre mains, bain d'herbes sacrées, enveloppement en sept points. Pour toutes les femmes — post-partum et transitions de vie.",
+        "price": "250€ · 2h30",
+        "cta": "Découvrir le rituel"
+      }
+    ]
+  },
+  "philosophy": {
+    "title": "Le massage est une philosophie,\nun art de vivre",
+    "text": "Passionnée de massage depuis l'enfance, Océane a développé une approche holistique qui va au-delà de la technique — une présence pleine, un toucher juste, un accompagnement du vivant.",
+    "cta": "Ma démarche"
+  },
+  "cta": {
+    "eyebrow": "Prêt(e) à commencer ?",
+    "title": "Offrez-vous un moment\nrien que pour vous",
+    "text": "Les massages ne sont ni tantriques, ni sexuels, ni érotiques.\nUn espace de soin professionnel, sécurisé et bienveillant.",
+    "ctaPrimary": "Réserver via Planity",
+    "ctaSecondary": "Nous contacter"
+  }
+}

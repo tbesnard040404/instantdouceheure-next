@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { getPhilosophieContent } from '@/lib/content'
 
 export const metadata = {
   title: "Philosophie — Instant Douce'Heure",
@@ -6,15 +7,17 @@ export const metadata = {
 }
 
 export default function PhilosophiePage() {
+  const c = getPhilosophieContent()
+
   return (
     <>
       <header className="page-hero">
         <div className="container">
           <nav className="breadcrumb" aria-label="Fil d'Ariane">
-            <Link href="/">Accueil</Link><span className="breadcrumb__sep">›</span><span>Philosophie</span>
+            <Link href="/">Accueil</Link><span className="breadcrumb__sep">›</span><span>{c.pageTitle}</span>
           </nav>
-          <h1>Ma Philosophie</h1>
-          <p className="sub">Une approche holistique du bien-être, née d&apos;une vocation d&apos;enfance</p>
+          <h1>{c.pageTitle}</h1>
+          <p className="sub">{c.pageSubtitle}</p>
         </div>
       </header>
 
@@ -22,20 +25,15 @@ export default function PhilosophiePage() {
         <div className="container">
           <div className="philo-layout">
             <div className="reveal">
-              <p className="eyebrow">Ma démarche</p>
-              <h2>Le massage... une technique pour certains, <em>une philosophie pour d&apos;autres</em></h2>
+              <p className="eyebrow">{c.eyebrow}</p>
+              <h2>{c.title}</h2>
               <div className="divider" />
-              <p>Passionnée de massage depuis l&apos;enfance, j&apos;ai d&apos;abord suivi mon intuition avant de formaliser mon apprentissage. Après des études en éducation environnementale, j&apos;ai entrepris une formation professionnelle en massage bien-être en 2011.</p>
-              <p>En 2014, j&apos;ai rencontré Renato Pappalardo et commencé une formation continue en Chin Daï, une discipline qui développe l&apos;auto-compréhension et la connaissance du monde environnant.</p>
-              <p>Au fil des années, je suis passée du statut de praticienne en massage à celui d&apos;<strong>accompagnante du vivant</strong> — cherchant toujours la posture juste, le toucher juste, une meilleure compréhension de soi et de l&apos;autre.</p>
-              <p>Aujourd&apos;hui, je propose des séances individuelles, des ateliers collectifs de plusieurs heures et des retraites de plusieurs jours — autant d&apos;espaces pour explorer, ressentir et se reconnecter à soi.</p>
+              {c.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
 
               <div className="philo-certs">
-                {[
-                  { text: 'Certificat de Formation — Novembre 2011', sub: 'Centre de Formation Hypothénuse · Paris' },
-                  { text: 'Certificat de Formation — Juillet 2015', sub: 'Centre de Formation Biopulse · Paris' },
-                  { text: 'Formation continue en Chin Daï', sub: 'Avec Renato Pappalardo · Depuis 2014' },
-                ].map(({ text, sub }) => (
+                {c.certs.map(({ text, sub }) => (
                   <div key={text} className="cert">
                     <span className="cert__icon">🎓</span>
                     <div>
@@ -49,14 +47,12 @@ export default function PhilosophiePage() {
 
             <div className="reveal d2">
               <div className="philo-quote">
-                <p className="philo-quote__text">
-                  &ldquo;Prendre soin de son corps, c&apos;est honorer le temple de son âme. Chaque séance est une invitation à revenir à soi — à s&apos;écouter, à se reconnecter profondément au vivant.&rdquo;
-                </p>
+                <p className="philo-quote__text">&ldquo;{c.quote}&rdquo;</p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '.875rem' }}>
                   <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'linear-gradient(135deg,var(--forest),var(--sage))', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontSize: '1.125rem', color: '#fff', flexShrink: 0 }}>O</div>
                   <div>
-                    <p style={{ fontWeight: 600, fontSize: '.9375rem', color: 'var(--dark)', margin: 0 }}>Océane Delannoy-Ferrero</p>
-                    <p style={{ fontSize: '.8125rem', color: 'var(--text-muted)', margin: 0 }}>Praticienne en massage bien-être &amp; soins énergétiques</p>
+                    <p style={{ fontWeight: 600, fontSize: '.9375rem', color: 'var(--dark)', margin: 0 }}>{c.quoteAuthor}</p>
+                    <p style={{ fontSize: '.8125rem', color: 'var(--text-muted)', margin: 0 }}>{c.quoteRole}</p>
                   </div>
                 </div>
               </div>

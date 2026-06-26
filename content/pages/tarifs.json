@@ -1,0 +1,89 @@
+{
+  "pageTitle": "Tarifs & Descriptions",
+  "pageSubtitle": "Des soins adaptés à vos besoins, à votre rythme",
+  "notice": "Les massages proposés ne sont ni tantriques, ni sexuels, ni érotiques. Les séances du dimanche sont majorées de 15€.",
+  "rows": [
+    {
+      "duree": "30 minutes",
+      "type": "Massage bien-être",
+      "typeDetail": "",
+      "prix": "35 €",
+      "description": "Séance courte idéale pour découvrir le massage ou cibler une zone précise : nuque, dos, jambes. Parfaite pour une première expérience ou une pause revitalisante entre deux rendez-vous. Sélection d'huiles adaptée à votre peau."
+    },
+    {
+      "duree": "45 minutes",
+      "type": "Massage bien-être",
+      "typeDetail": "",
+      "prix": "50 €",
+      "description": "Séance équilibrée pour un véritable lâcher-prise. Le temps nécessaire pour que le corps commence à relâcher les tensions profondes. Idéale en entretien régulier ou comme découverte approfondie du massage holistique."
+    },
+    {
+      "duree": "1 heure",
+      "type": "Massage bien-être",
+      "typeDetail": "",
+      "prix": "75 €",
+      "description": "La séance complète par excellence. Prise en charge globale du corps, du visage et de la tête selon vos besoins. Entretien de 5 à 10 minutes en début de séance, choix des huiles personnalisé, temps de détente final inclus."
+    },
+    {
+      "duree": "1h15",
+      "type": "Massage bien-être en duo",
+      "typeDetail": "· réalisé avec Céline · 2 personnes",
+      "prix": "180 €",
+      "description": "Partagez un moment de bien-être à deux — en couple, entre amis, entre parent et enfant. Séance réalisée en duo avec Céline : chaque personne bénéficie d'1h15 de massage personnalisé en simultané (soit 90 € par personne). À réserver via le formulaire de contact, environ un mois avant la date souhaitée."
+    },
+    {
+      "duree": "1h30",
+      "type": "Massage bien-être",
+      "typeDetail": "",
+      "prix": "95 €",
+      "description": "Séance approfondie pour un travail complet sur le corps entier avec attention particulière aux zones de tension. Inclut un temps de consultation, un massage intégral et un temps de retour au calme pour une détente maximale."
+    },
+    {
+      "duree": "2 heures",
+      "type": "Massage bien-être",
+      "typeDetail": "",
+      "prix": "150 €",
+      "description": "L'expérience ultime du massage holistique. Deux heures consacrées entièrement à votre bien-être : corps, visage, cuir chevelu, pieds. Soin complet avec huiles de massage haut de gamme sélectionnées selon votre profil. Un voyage sensoriel profond."
+    },
+    {
+      "duree": "1h15",
+      "type": "Soin énergétique (Chin Daï)",
+      "typeDetail": "",
+      "prix": "75 €",
+      "description": "Méthode inspirée du Chin Daï, art martial transmis par Renato Pappalardo. Ce soin travaille sur les dimensions physico-psychiques et développe une conscience raffinée de l'énergie. Travail sur les chakras et circuits énergétiques pour soutenir le bien-être mental, physique et intuitif. Non recommandé comme première séance."
+    },
+    {
+      "duree": "2h30",
+      "type": "Soin rituel Rebozo",
+      "typeDetail": "",
+      "prix": "250 €",
+      "description": "Soin cérémoniel mexicain traditionnel : massage à quatre mains sur tout le corps (30–45 min), bain d'herbes sacrées, enveloppement en sept points avec le tissu traditionnel. Disponible le vendredi/samedi matin — à domicile (avec baignoire) ou au salon. Idéal pour le post-partum et toutes les grandes transitions de vie."
+    }
+  ],
+  "soins": [
+    {
+      "title": "Massage Holistique",
+      "desc": "Séances entièrement personnalisées après un court échange sur vos besoins. Je sélectionne des huiles adaptées à votre type de peau et votre personnalité. Prise en charge de la grossesse dès 3 mois jusqu'au post-partum, avec forfaits spéciaux disponibles.",
+      "cta": "Réserver en ligne →",
+      "ctaLink": "planity"
+    },
+    {
+      "title": "Soin Énergétique (Chin Daï)",
+      "desc": "Méthode inspirée du Chin Daï, art martial transmis par Renato Pappalardo. Ce soin travaille sur les dimensions physico-psychiques et développe une conscience raffinée de l'énergie. Il cible les chakras et circuits énergétiques pour soutenir votre bien-être mental, physique et intuitif.",
+      "cta": "Réserver en ligne →",
+      "ctaLink": "planity"
+    },
+    {
+      "title": "Soin Rituel Rebozo",
+      "desc": "Soin cérémoniel mexicain traditionnel d'environ 2h30 : massage à quatre mains sur tout le corps (30–45 min), bain d'herbes sacrées, enveloppement en sept points avec le tissu traditionnel. Disponible le vendredi/samedi matin à domicile (avec baignoire) ou au salon. Idéal pour le post-partum et les transitions de vie.",
+      "cta": "Demander une date →",
+      "ctaLink": "/contact?sujet=Renseignement+sur+les+soins"
+    },
+    {
+      "title": "Massage en Duo",
+      "desc": "Un moment de bien-être partagé à deux — en couple, entre amis, ou entre parent et enfant. Séance réalisée en duo avec Céline : chaque personne bénéficie d'1h15 de massage personnalisé en simultané. 180 € la séance · 90 € par personne. À réserver environ un mois avant la date souhaitée.",
+      "cta": "Demander une date →",
+      "ctaLink": "/contact?sujet=Massage+en+duo"
+    }
+  ]
+}

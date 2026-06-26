@@ -1,0 +1,71 @@
+{
+  "pageTitle": "Abonnements Annuels",
+  "pageSubtitle": "Prenez soin de vous régulièrement, à un tarif avantageux",
+  "sectionTitle": "Un accompagnement sur mesure,\ntout au long de l'année",
+  "sectionSubtitle": "Chaque abonnement inclut un entretien de 5 à 10 minutes en début de séance pour adapter le soin à vos besoins du moment, et un temps d'échange après.",
+  "plans": [
+    {
+      "name": "Essentiel",
+      "price": "32€",
+      "period": "12 mois · 6 séances/an",
+      "desc": "Une séance d'1h par période scolaire (Toussaint, Noël, Février, Pâques, Juin, Rentrée).",
+      "popular": false,
+      "feats": [
+        "Massage personnalisé de 50–55 min",
+        "Discussion de vos besoins à chaque visite",
+        "1 séance offerte à l'inscription"
+      ]
+    },
+    {
+      "name": "Régulier",
+      "price": "63€",
+      "period": "12 mois · 1 séance/mois",
+      "desc": "Suivi régulier avec massages ou soins énergétiques adaptés à chaque séance.",
+      "popular": true,
+      "feats": [
+        "Entretien de 5–10 min par séance",
+        "50–55 min de soin personnalisé",
+        "Débriefing sur vos sensations",
+        "2 séances offertes incluses"
+      ]
+    },
+    {
+      "name": "Intensif",
+      "price": "79€",
+      "period": "12 mois · 1 séance 1h30/mois",
+      "desc": "Accompagnement approfondi avec des séances plus longues et un suivi complet.",
+      "popular": false,
+      "feats": [
+        "Consultation de 5–10 minutes",
+        "1h15 de massage personnalisé",
+        "Temps de détente final",
+        "2 séances offertes incluses"
+      ]
+    },
+    {
+      "name": "Grossesse",
+      "price": "67€",
+      "period": "12 mois · 9 séances",
+      "desc": "Accompagnement personnalisé tout au long de la grossesse, du premier trimestre jusqu'à l'accouchement.",
+      "popular": false,
+      "feats": [
+        "Entretien de 5 min par séance",
+        "55 min de massage adapté à la grossesse",
+        "1 séance offerte incluse"
+      ]
+    },
+    {
+      "name": "Périnatalité",
+      "price": "82€",
+      "period": "15 mois · Grossesse → Post-partum",
+      "desc": "Accompagnement complet de la grossesse jusqu'à 6 mois après l'accouchement.",
+      "popular": false,
+      "feats": [
+        "55 min de massage pendant la grossesse",
+        "1 séance Rebozo min. 40 jours après",
+        "55 min de soin post-partum/mois",
+        "2 séances offertes incluses"
+      ]
+    }
+  ]
+}

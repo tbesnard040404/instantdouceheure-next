@@ -1,0 +1,35 @@
+{
+  "pageTitle": "Retraites",
+  "pageSubtitle": "Des espaces pour se retrouver, au cœur de la nature normande",
+  "introEyebrow": "En collaboration avec Sevdha Harmony",
+  "introTitle": "Deux femmes, deux univers\ncomplémentaires",
+  "introText": "\"Cette collaboration est avant tout une rencontre entre deux femmes, entre deux univers différents et complémentaires.\" Nous co-créons des espaces sécurisés et bienveillants où chaque activité est pensée comme une synergie cohérente, tout en restant flexible selon les besoins du groupe.",
+  "retreats": [
+    {
+      "tag": "Réservé aux femmes",
+      "title": "Retrouver son pouvoir féminin",
+      "date": "2026 · Dates à venir",
+      "location": "Nature normande",
+      "activities": [
+        "🌸 Soins Rebozo",
+        "🌿 Yoni steam",
+        "🤲 Massages",
+        "🎨 Ateliers créatifs"
+      ],
+      "cta": "Me contacter pour les dates"
+    },
+    {
+      "tag": "Mixte · Novembre 2026",
+      "title": "Le chemin des 5 éléments",
+      "date": "Novembre 2026",
+      "location": "Retraite mixte",
+      "activities": [
+        "🤲 Massages",
+        "💃 Danse libre",
+        "✨ Travail énergétique",
+        "🍫 Cérémonie cacao"
+      ],
+      "cta": "Me contacter"
+    }
+  ]
+}

@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import { RevealWrapper } from '@/components/ui/RevealWrapper'
+import { getHomeContent, getSiteSettings } from '@/lib/content'
 
-const PLANITY = 'https://www.planity.com/instant-douceheure-76600-le-havre'
-
-// SVG illustrations (extraites du HTML original)
+// SVG illustrations inline (zéro dépendance externe)
 function MassageSvg() {
   return (
     <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 130, height: 97, opacity: .93 }}>
@@ -18,7 +17,6 @@ function MassageSvg() {
     </svg>
   )
 }
-
 function EnergieSvg() {
   return (
     <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 130, height: 97, opacity: .93 }}>
@@ -33,7 +31,6 @@ function EnergieSvg() {
     </svg>
   )
 }
-
 function RebozoSvg() {
   return (
     <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-52%)', width: 130, height: 97, opacity: .93 }}>
@@ -45,7 +42,17 @@ function RebozoSvg() {
   )
 }
 
+const cardVisuals = [
+  { visual: 's-card__visual--massage', svg: <MassageSvg /> },
+  { visual: 's-card__visual--energie', svg: <EnergieSvg /> },
+  { visual: 's-card__visual--rebozo', svg: <RebozoSvg /> },
+]
+const cardLinks = ['/tarifs', '/tarifs', '/tarifs']
+
 export default function HomePage() {
+  const c = getHomeContent()
+  const s = getSiteSettings()
+
   return (
     <>
       {/* HERO */}
@@ -53,26 +60,23 @@ export default function HomePage() {
         <div className="hero__bg" aria-hidden="true" />
         <div className="container">
           <div className="hero__content">
-            <p className="hero__eyebrow">Le Havre · Normandie</p>
+            <p className="hero__eyebrow">{c.hero.eyebrow}</p>
             <h1 className="hero__title">
-              Instant<br /><em>Douce&apos;Heure</em>
+              {c.hero.title.split("'")[0]}&apos;<br /><em>{c.hero.title.split("'")[1] ?? ''}</em>
             </h1>
-            <p className="hero__sub">
-              Massages de bien-être · Soins énergétiques<br />
-              Produits naturels &amp; bio · Retraites et ateliers en pleine nature
-            </p>
+            <p className="hero__sub" style={{ whiteSpace: 'pre-line' }}>{c.hero.subtitle}</p>
             <div className="hero__actions">
-              <a href={PLANITY} target="_blank" rel="noopener noreferrer" className="btn btn--sand btn--lg">
-                Prendre rendez-vous
+              <a href={s.planityUrl} target="_blank" rel="noopener noreferrer" className="btn btn--sand btn--lg">
+                {c.hero.ctaPrimary}
               </a>
-              <Link href="/tarifs" className="btn btn--ghost">Voir les soins</Link>
+              <Link href="/tarifs" className="btn btn--ghost">{c.hero.ctaSecondary}</Link>
             </div>
           </div>
         </div>
         <div className="hero__badge" aria-hidden="true">
           <div className="hero__badge-ring">
-            <span className="hero__badge-num">+15</span>
-            <span className="hero__badge-lbl">ans de<br />passion</span>
+            <span className="hero__badge-num">{c.hero.badgeNumber}</span>
+            <span className="hero__badge-lbl" style={{ whiteSpace: 'pre-line' }}>{c.hero.badgeLabel}</span>
           </div>
         </div>
         <div className="hero__scroll" aria-hidden="true">
@@ -98,41 +102,25 @@ export default function HomePage() {
       <section className="section" aria-labelledby="services-title">
         <div className="container">
           <RevealWrapper>
-            <p className="eyebrow">Nos soins</p>
-            <h2 id="services-title">Un accompagnement<br />sur mesure pour vous</h2>
+            <p className="eyebrow">{c.services.eyebrow}</p>
+            <h2 id="services-title" style={{ whiteSpace: 'pre-line' }}>{c.services.title}</h2>
             <div className="divider" />
-            <p style={{ maxWidth: 560, color: 'var(--text-muted)', fontSize: '1.0625rem' }}>
-              Chaque séance est pensée pour répondre à vos besoins du moment — corps, énergie et esprit.
-            </p>
+            <p style={{ maxWidth: 560, color: 'var(--text-muted)', fontSize: '1.0625rem' }}>{c.services.subtitle}</p>
           </RevealWrapper>
           <div className="services-grid">
-            <article className="s-card reveal d1">
-              <div className="s-card__visual s-card__visual--massage" aria-hidden="true"><MassageSvg /></div>
-              <div className="s-card__body">
-                <h3 className="s-card__title">Massage Holistique</h3>
-                <p className="s-card__desc">Séances sur mesure adaptées à vos besoins du moment. Sélection d'huiles selon votre type de peau et votre personnalité. Prise en charge de la grossesse dès 3 mois et du post-partum.</p>
-                <div className="s-card__price">À partir de 35€ <span>· 30 min</span></div>
-                <Link href="/tarifs" className="btn btn--secondary btn--sm">Voir les tarifs</Link>
-              </div>
-            </article>
-            <article className="s-card reveal d2">
-              <div className="s-card__visual s-card__visual--energie" aria-hidden="true"><EnergieSvg /></div>
-              <div className="s-card__body">
-                <h3 className="s-card__title">Soin Énergétique</h3>
-                <p className="s-card__desc">Méthode inspirée du Chin Daï, art martial transmis par Renato Pappalardo. Travail sur les centres et circuits énergétiques pour soutenir votre santé mentale, physique et intuitive.</p>
-                <div className="s-card__price">75€ <span>· 1h15</span></div>
-                <Link href="/tarifs" className="btn btn--secondary btn--sm">En savoir plus</Link>
-              </div>
-            </article>
-            <article className="s-card reveal d3">
-              <div className="s-card__visual s-card__visual--rebozo" aria-hidden="true"><RebozoSvg /></div>
-              <div className="s-card__body">
-                <h3 className="s-card__title">Soin Rituel Rebozo</h3>
-                <p className="s-card__desc">Soin cérémoniel mexicain traditionnel de 2h30. Massage à quatre mains, bain d'herbes sacrées, enveloppement en sept points. Pour toutes les femmes — post-partum et transitions de vie.</p>
-                <div className="s-card__price">250€ <span>· 2h30</span></div>
-                <Link href="/tarifs" className="btn btn--secondary btn--sm">Découvrir le rituel</Link>
-              </div>
-            </article>
+            {c.services.cards.map((card, i) => (
+              <article key={card.title} className={`s-card reveal d${i + 1}`}>
+                <div className={`s-card__visual ${cardVisuals[i].visual}`} aria-hidden="true">
+                  {cardVisuals[i].svg}
+                </div>
+                <div className="s-card__body">
+                  <h3 className="s-card__title">{card.title}</h3>
+                  <p className="s-card__desc">{card.desc}</p>
+                  <div className="s-card__price">{card.price}</div>
+                  <Link href={cardLinks[i]} className="btn btn--secondary btn--sm">{card.cta}</Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -142,12 +130,10 @@ export default function HomePage() {
         <div className="container container--narrow" style={{ textAlign: 'center' }}>
           <RevealWrapper>
             <p className="eyebrow" style={{ justifyContent: 'center' }}>Ma philosophie</p>
-            <h2 id="philo-title-home">Le massage est une philosophie,<br /><em>un art de vivre</em></h2>
+            <h2 id="philo-title-home" style={{ whiteSpace: 'pre-line' }}>{c.philosophy.title}</h2>
             <div className="divider divider--center" />
-            <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>
-              Passionnée de massage depuis l&apos;enfance, Océane a développé une approche holistique qui va au-delà de la technique — une présence pleine, un toucher juste, un accompagnement du vivant.
-            </p>
-            <Link href="/philosophie" className="btn btn--primary">Ma démarche</Link>
+            <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>{c.philosophy.text}</p>
+            <Link href="/philosophie" className="btn btn--primary">{c.philosophy.cta}</Link>
           </RevealWrapper>
         </div>
       </section>
@@ -165,11 +151,11 @@ export default function HomePage() {
           </RevealWrapper>
           <div className="plans-scroll reveal d1">
             {[
-              { name: 'Essentiel', price: '32€', period: '1h par période scolaire · 12 mois', desc: '6 séances par an, espacées selon les vacances scolaires. 1 séance offerte à l\'inscription.' },
-              { name: 'Régulier', price: '63€', period: '1h par mois · 12 mois', desc: 'Suivi mensuel personnalisé avec 2 séances offertes incluses dans l\'abonnement.', pop: true },
-              { name: 'Intensif', price: '79€', period: '1h30 par mois · 12 mois', desc: 'Séances approfondies d\'1h15 de soin + consultation. 2 séances offertes incluses.' },
-              { name: 'Grossesse', price: '67€', period: '12 mois · 9 séances', desc: 'Accompagnement personnalisé tout au long de la grossesse, du premier trimestre jusqu\'à l\'accouchement.' },
-              { name: 'Périnatalité', price: '82€', period: '15 mois · Grossesse → Post-partum', desc: 'Accompagnement complet de la grossesse jusqu\'à 6 mois après l\'accouchement.' },
+              { name: 'Essentiel', price: '32€', period: '1h par période scolaire · 12 mois', desc: "6 séances par an, espacées selon les vacances scolaires. 1 séance offerte à l'inscription." },
+              { name: 'Régulier', price: '63€', period: '1h par mois · 12 mois', desc: "Suivi mensuel personnalisé avec 2 séances offertes incluses dans l'abonnement.", pop: true },
+              { name: 'Intensif', price: '79€', period: '1h30 par mois · 12 mois', desc: "Séances approfondies d'1h15 de soin + consultation. 2 séances offertes incluses." },
+              { name: 'Grossesse', price: '67€', period: '12 mois · 9 séances', desc: "Accompagnement personnalisé tout au long de la grossesse, du premier trimestre jusqu'à l'accouchement." },
+              { name: 'Périnatalité', price: '82€', period: '15 mois · Grossesse → Post-partum', desc: "Accompagnement complet de la grossesse jusqu'à 6 mois après l'accouchement." },
             ].map(({ name, price, period, desc, pop }) => (
               <div key={name} className={`plan-card${pop ? ' plan-card--pop' : ''}`}>
                 {pop && <div className="plan-badge">Le plus choisi</div>}
@@ -248,12 +234,12 @@ export default function HomePage() {
       {/* CTA */}
       <section className="cta-sec" aria-labelledby="cta-title">
         <div className="container container--narrow reveal">
-          <p className="eyebrow eyebrow--light" style={{ justifyContent: 'center' }}>Prêt(e) à commencer ?</p>
-          <h2 id="cta-title">Offrez-vous un moment<br />rien que pour vous</h2>
-          <p>Les massages ne sont ni tantriques, ni sexuels, ni érotiques.<br />Un espace de soin professionnel, sécurisé et bienveillant.</p>
+          <p className="eyebrow eyebrow--light" style={{ justifyContent: 'center' }}>{c.cta.eyebrow}</p>
+          <h2 id="cta-title" style={{ whiteSpace: 'pre-line' }}>{c.cta.title}</h2>
+          <p style={{ whiteSpace: 'pre-line' }}>{c.cta.text}</p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={PLANITY} target="_blank" rel="noopener noreferrer" className="btn btn--sand btn--lg">Réserver via Planity</a>
-            <Link href="/contact" className="btn btn--ghost">Nous contacter</Link>
+            <a href={s.planityUrl} target="_blank" rel="noopener noreferrer" className="btn btn--sand btn--lg">{c.cta.ctaPrimary}</a>
+            <Link href="/contact" className="btn btn--ghost">{c.cta.ctaSecondary}</Link>
           </div>
         </div>
       </section>

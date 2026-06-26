@@ -1,0 +1,26 @@
+{
+  "pageTitle": "Mes Collaborations",
+  "pageSubtitle": "Tisser ensemble les talents, les envies et les rêves",
+  "introTitle": "Des partenaires de cœur,\npas de simples collaborations",
+  "introText": "Je valorise avant tout les relations d'interdépendance construites sur des valeurs partagées : le bien-faire, le respect mutuel et l'amour de la nature. Chaque collaboration est une rencontre humaine avant d'être professionnelle.",
+  "collabs": [
+    {
+      "initials": "CB",
+      "name": "Céline Boucher",
+      "role": "Masseuse holistique",
+      "desc": "Formée avec Océane en 2015, Céline apporte professionnalisme et écoute fine du corps subtil. Elle reçoit au cabinet les vendredis, samedis et dimanches sur rendez-vous, et co-anime les séances et ateliers bien-être."
+    },
+    {
+      "initials": "J",
+      "name": "Jérémy",
+      "role": "Co-créateur · Ateliers paysagistes",
+      "desc": "Paysagiste depuis 2016, Jérémy co-crée avec Océane les ateliers nature du domaine Milélé. Ensemble, ils ont acquis ce terrain de 2 500 m² en forêt normande pour offrir des espaces de reconnexion profonde à la nature."
+    },
+    {
+      "initials": "MM",
+      "name": "Marie Matis",
+      "role": "Alchimiste du cœur · Rebozo",
+      "desc": "Collaboratrice depuis juin 2022 sur les rituels Rebozo, décrits comme \"une ode à la renaissance des femmes vers l'amour de soi\". Ensemble, elles ont co-créé la retraite \"Rencontre de son être alchimique\"."
+    }
+  ]
+}
