@@ -1,0 +1,182 @@
+fragment HomeParts on Home {
+  __typename
+  hero {
+    __typename
+    eyebrow
+    title
+    subtitle
+    ctaPrimary
+    ctaSecondary
+    badgeNumber
+    badgeLabel
+  }
+  services {
+    __typename
+    eyebrow
+    title
+    subtitle
+    cards {
+      __typename
+      title
+      desc
+      price
+      cta
+    }
+  }
+  philosophy {
+    __typename
+    title
+    text
+    cta
+  }
+  cta {
+    __typename
+    eyebrow
+    title
+    text
+    ctaPrimary
+    ctaSecondary
+  }
+}
+
+fragment TarifsParts on Tarifs {
+  __typename
+  pageTitle
+  pageSubtitle
+  notice
+  rows {
+    __typename
+    duree
+    type
+    typeDetail
+    prix
+    description
+  }
+  soins {
+    __typename
+    title
+    desc
+    cta
+    ctaLink
+  }
+}
+
+fragment AbonnementsParts on Abonnements {
+  __typename
+  pageTitle
+  pageSubtitle
+  sectionTitle
+  sectionSubtitle
+  plans {
+    __typename
+    name
+    price
+    period
+    desc
+    popular
+    feats
+  }
+}
+
+fragment AteliersParts on Ateliers {
+  __typename
+  pageTitle
+  pageSubtitle
+  introEyebrow
+  introTitle
+  introText
+  items {
+    __typename
+    title
+    price
+    priceUnit
+    desc
+    date
+  }
+  promo {
+    __typename
+    title
+    text
+    priceBefore
+    priceAfter
+  }
+}
+
+fragment RetraitesParts on Retraites {
+  __typename
+  pageTitle
+  pageSubtitle
+  introEyebrow
+  introTitle
+  introText
+  retreats {
+    __typename
+    tag
+    title
+    date
+    location
+    activities
+    cta
+  }
+}
+
+fragment PhilosophieParts on Philosophie {
+  __typename
+  pageTitle
+  pageSubtitle
+  eyebrow
+  title
+  paragraphs
+  quote
+  quoteAuthor
+  quoteRole
+  certs {
+    __typename
+    text
+    sub
+  }
+}
+
+fragment ContactParts on Contact {
+  __typename
+  pageTitle
+  pageSubtitle
+  notice
+  address
+  phone
+  email
+  hoursWeek
+  hoursSunday
+  hoursSundayNote
+}
+
+fragment CollaborationsParts on Collaborations {
+  __typename
+  pageTitle
+  pageSubtitle
+  introTitle
+  introText
+  collabs {
+    __typename
+    initials
+    name
+    role
+    desc
+  }
+}
+
+fragment SettingsParts on Settings {
+  __typename
+  siteName
+  siteTagline
+  planityUrl
+  instagramUrl
+  facebookUrl
+  formspreeId
+  siret
+  footer {
+    __typename
+    description
+    copyright
+  }
+}
