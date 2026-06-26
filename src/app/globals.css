@@ -98,7 +98,9 @@ a:hover { color:var(--sand); }
 .nav__links li a:hover,.nav__links li a.active { background:rgba(255,255,255,.15); color:#fff; }
 .nav.scrolled .nav__links li a { color:var(--text); }
 .nav.scrolled .nav__links li a:hover,.nav.scrolled .nav__links li a.active { background:var(--forest-pale); color:var(--forest); }
-.nav__book { flex-shrink:0; margin-left:1rem; }
+/* Bouton réserver — positionné en absolu par rapport au nav (position:fixed),
+   indépendant du flux des liens, toujours visible */
+.nav__book { position:absolute; right:1.5rem; top:50%; transform:translateY(-50%); z-index:10; white-space:nowrap; }
 .nav__burger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:.5rem; border-radius:var(--r-sm); }
 .nav__burger span { display:block; width:22px; height:1.5px; background:#fff; border-radius:2px; transition:all var(--t-base); }
 .nav.scrolled .nav__burger span { background:var(--dark); }

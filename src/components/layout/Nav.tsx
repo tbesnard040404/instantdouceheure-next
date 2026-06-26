@@ -60,15 +60,6 @@ export function Nav() {
               ))}
             </ul>
 
-            <a
-              href={PLANITY}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--sand btn--sm nav__book"
-            >
-              Réserver en ligne
-            </a>
-
             <button
               className={`nav__burger${open ? ' open' : ''}`}
               id="burger"
@@ -82,6 +73,17 @@ export function Nav() {
             </button>
           </div>
         </div>
+
+        {/* Bouton réservation — positionné en absolu, hors flux, toujours visible */}
+        <a
+          href={PLANITY}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn--sand btn--sm nav__book"
+          aria-label="Réserver en ligne sur Planity"
+        >
+          Réserver
+        </a>
       </nav>
 
       {/* Mobile overlay */}
