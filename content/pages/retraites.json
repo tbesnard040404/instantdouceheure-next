@@ -16,7 +16,8 @@
         "🤲 Massages",
         "🎨 Ateliers créatifs"
       ],
-      "cta": "Me contacter pour les dates"
+      "cta": "Réserver",
+      "ctaLink": "https://book.stripe.com/aFa28rcI8eQz1RigVw6c001"
     },
     {
       "tag": "Mixte · Novembre 2026",
@@ -29,7 +30,8 @@
         "✨ Travail énergétique",
         "🍫 Cérémonie cacao"
       ],
-      "cta": "Me contacter"
+      "cta": "Réserver",
+      "ctaLink": "https://book.stripe.com/00w8wP7nOgYHgMcdJk6c000"
     }
   ]
 }

@@ -13,6 +13,7 @@ interface AtelierData {
   date: string
   icon: React.ReactNode
   delay: string
+  stripeLink: string
 }
 
 const ateliers: AtelierData[] = [
@@ -23,6 +24,7 @@ const ateliers: AtelierData[] = [
     desc: 'Sport, méditation, relaxation et massages. Journée de 9h à 17h avec déjeuner végétarien.',
     date: '📅 27 juin · 18 juillet · 5 sept. 2026',
     delay: 'd1',
+    stripeLink: 'https://book.stripe.com/aFa9ATcI88sbcvW0Wy6c00e',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <circle cx="16" cy="7" r="3.5"/>
@@ -39,6 +41,7 @@ const ateliers: AtelierData[] = [
     desc: 'Randonnée, création intuitive, écriture, dessin, méditation, feu de camp et nuit en tente.',
     date: '📅 15–16 août 2026',
     delay: 'd2',
+    stripeLink: 'https://book.stripe.com/6oUcN5bE4bEn2VmbBc6c00b',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <path d="M4 26 L16 6 L28 26Z"/>
@@ -55,6 +58,7 @@ const ateliers: AtelierData[] = [
     desc: 'Jeux en plein air, randonnée, connexion à la nature, découverte des plantes comestibles.',
     date: '📅 6 juin 2026',
     delay: 'd3',
+    stripeLink: 'https://book.stripe.com/bJe7sLbE4fUD8fGdJk6c00a',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <path d="M8 26 Q8 10 22 6 C27 12 24 22 14 26Z"/>
@@ -71,6 +75,7 @@ const ateliers: AtelierData[] = [
     desc: 'Compostage, potager, taille, techniques durables et respectueuses de l\'environnement.',
     date: '📅 17 mai · 21 juin 2026',
     delay: 'd1',
+    stripeLink: 'https://book.stripe.com/3cI00jeQgfUD9jKfRs6c009',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <rect x="10" y="22" width="12" height="6" rx="2"/>
@@ -87,6 +92,7 @@ const ateliers: AtelierData[] = [
     desc: 'Création avec matériaux naturels, land art et expression artistique au fil de l\'imagination.',
     date: '📅 30 mai · 28 juin 2026',
     delay: 'd2',
+    stripeLink: 'https://book.stripe.com/14A28r8rSeQz0Ne20C6c007',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <path d="M16 26 C16 26 5 19 5 11 C5 6 10 4 16 10 C22 4 27 6 27 11 C27 19 16 26 16 26Z"/>
@@ -102,6 +108,7 @@ const ateliers: AtelierData[] = [
     desc: 'Relaxation en forêt, création d\'une statue Jizo, exercices en binôme, cérémonie cacao.',
     date: '📅 8 août 2026',
     delay: 'd3',
+    stripeLink: 'https://book.stripe.com/7sYeVd5fG5fZanOax86c005',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <path d="M16 27 C16 27 4 19 4 11 C4 7 7 4 11 4 C13 4 15 5 16 7 C17 5 19 4 21 4 C25 4 28 7 28 11 C28 19 16 27 16 27Z"/>
@@ -115,6 +122,7 @@ const ateliers: AtelierData[] = [
     desc: 'Massage, soins énergétiques, exercices d\'écriture des ombres et méditation guidée.',
     date: '📅 23 mai 2026',
     delay: 'd1',
+    stripeLink: 'https://book.stripe.com/7sYcN5bE4eQzgMc9t46c004',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <path d="M16 24 Q10 14 12 6 Q16 10 16 24Z"/>
@@ -132,6 +140,7 @@ const ateliers: AtelierData[] = [
     desc: 'Marche sensorielle, méditation en forêt, travail créatif, connexion aux éléments naturels.',
     date: '📅 20 juin 2026',
     delay: 'd2',
+    stripeLink: 'https://book.stripe.com/4gM3cvaA05fZanO5cO6c003',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <line x1="16" y1="28" x2="16" y2="17"/>
@@ -148,6 +157,7 @@ const ateliers: AtelierData[] = [
     desc: 'Initiation aux soins énergétiques, écoute intuitive, exercices de confiance et travail en binôme.',
     date: '📅 11 juillet 2026',
     delay: 'd3',
+    stripeLink: 'https://book.stripe.com/eVq7sLeQgdMv67ydJk6c002',
     icon: (
       <svg viewBox="0 0 32 32" fill="none" stroke="var(--forest)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: 34, height: 34 }}>
         <path d="M4 22 L10 22 L10 16 Q10 13 13 13 L16 13 L16 13 Q19 13 19 16 L19 22 L25 22"/>
@@ -197,12 +207,14 @@ export default function AteliersPage() {
                   <h4 className="atelier-card__title">{a.title}</h4>
                   <p className="atelier-card__desc">{a.desc}</p>
                   <p className="atelier-card__date">{a.date}</p>
-                  <Link
-                    href={`/contact?sujet=Ateliers+Ve%27j%27tal&atelier=${encodeURIComponent(a.title)}`}
+                  <a
+                    href={a.stripeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn--primary btn--sm atelier-card__btn"
                   >
                     Réserver ma place
-                  </Link>
+                  </a>
                 </div>
               </article>
             ))}

@@ -50,7 +50,7 @@ export default function RetraitesPage() {
                       <li key={act} style={{ fontSize: '.875rem', color: 'rgba(255,255,255,.78)' }}>{act}</li>
                     ))}
                   </ul>
-                  <Link href="/contact?sujet=Retraites+2026" className="btn btn--sand btn--sm">{r.cta}</Link>
+                  <a href={r.ctaLink} target="_blank" rel="noopener noreferrer" className="btn btn--sand btn--sm">{r.cta}</a>
                 </div>
               </article>
             ))}

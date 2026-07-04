@@ -71,6 +71,34 @@ export default function TarifsPage() {
             </article>
           </div>
 
+          {/* CARTES CADEAUX */}
+          <RevealWrapper style={{ marginTop: '4rem', marginBottom: '2rem' }}>
+            <p className="eyebrow">Offrir un moment de bien-être</p>
+            <h2 style={{ marginBottom: '.75rem' }}>Cartes Cadeaux</h2>
+            <p style={{ fontSize: '1rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>
+              Offrez un soin à un proche — disponibles en plusieurs montants, valables sur l&apos;ensemble des prestations.
+            </p>
+          </RevealWrapper>
+          <div className="soin-grid reveal">
+            {[
+              { label: 'Carte cadeau 35 €', href: 'https://buy.stripe.com/3cI9ATfUk5fZ7bC20C6c00f' },
+              { label: 'Carte cadeau 50 €', href: 'https://buy.stripe.com/5kQbJ1fUkaAj9jK48K6c00g' },
+              { label: 'Carte cadeau 75 €', href: 'https://buy.stripe.com/7sYbJ10Zq0ZJ9jK7kW6c00l' },
+              { label: 'Carte cadeau 95 €', href: 'https://buy.stripe.com/3cIeVd37ydMvfI86gS6c00h' },
+              { label: 'Carte cadeau 150 €', href: 'https://buy.stripe.com/eVq9AT37ybEn3Zq8p06c00i' },
+              { label: 'Carte cadeau 180 €', href: 'https://buy.stripe.com/dRmeVd0ZqfUDbrS20C6c00k' },
+              { label: 'Carte cadeau 250 €', href: 'https://buy.stripe.com/fZu6oH37yaAj1RicFg6c00j' },
+            ].map(({ label, href }) => (
+              <article key={label} className="soin-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '1rem' }}>
+                <div style={{ fontSize: '2.5rem' }}>🎁</div>
+                <h3 className="soin-card__title">{label}</h3>
+                <a href={href} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm" style={{ marginTop: 'auto' }}>
+                  Offrir ce montant →
+                </a>
+              </article>
+            ))}
+          </div>
+
           <div className="cta-sec reveal" style={{ borderRadius: 'var(--r-xl)', marginTop: '3rem' }}>
             <p className="eyebrow eyebrow--light" style={{ justifyContent: 'center' }}>Réservation en ligne uniquement</p>
             <h2>Prêt(e) à vous offrir ce moment ?</h2>

@@ -106,6 +106,7 @@ export interface RetraitesContent {
     location: string
     activities: string[]
     cta: string
+    ctaLink: string
   }>
 }
 
