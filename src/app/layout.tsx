@@ -3,6 +3,7 @@ import { Playfair_Display, DM_Sans } from 'next/font/google'
 import './globals.css'
 import { Nav } from '@/components/layout/Nav'
 import { Footer } from '@/components/layout/Footer'
+import { GlobalRevealObserver } from '@/components/ui/GlobalRevealObserver'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="fr" className={`${playfair.variable} ${dmSans.variable}`}>
       <body>
         <a href="#main" className="skip">Aller au contenu principal</a>
+        <GlobalRevealObserver />
         <Nav />
         <main id="main">{children}</main>
         <Footer />
