@@ -3,15 +3,34 @@
 import { useEffect } from 'react'
 
 /**
- * 1. Ajoute .js-ready sur <html> → le CSS peut maintenant masquer les .reveal
- * 2. Observe immédiatement tous les .reveal pour les animer à l'entrée dans le viewport
- * Approche progressive : sans JS, tous les éléments restent visibles.
+ * Stratégie sans flash et sans contenu invisible :
+ *
+ * 1. SYNCHRONE : on parcourt tous les .reveal déjà dans le viewport
+ *    et on leur ajoute immédiatement "shown" (visible).
+ * 2. Seulement APRÈS, on ajoute .js-ready sur <html> → le CSS masque
+ *    uniquement les .reveal hors-viewport (qui n'ont pas encore "shown").
+ * 3. L'IntersectionObserver observe les éléments restants et les anime
+ *    au fur et à mesure qu'ils entrent dans le viewport.
+ *
+ * Résultat : zéro flash, zéro contenu invisible, sur tous les appareils.
  */
 export function GlobalRevealObserver() {
   useEffect(() => {
-    // Étape 1 : signaler que JS est actif
+    // ÉTAPE 1 — marquer synchroniquement comme visibles tous les éléments
+    // déjà dans le viewport (getBoundingClientRect est synchrone)
+    document.querySelectorAll<HTMLElement>('.reveal').forEach((el) => {
+      const rect = el.getBoundingClientRect()
+      if (rect.top < window.innerHeight + 60 && rect.bottom > 0) {
+        el.classList.add('shown')
+      }
+    })
+
+    // ÉTAPE 2 — maintenant que les éléments visibles ont "shown",
+    // activer le CSS qui masque les éléments hors-viewport sans "shown"
     document.documentElement.classList.add('js-ready')
 
+    // ÉTAPE 3 — observer les éléments restants (hors-viewport) pour les
+    // animer quand l'utilisateur scrolle
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -24,15 +43,20 @@ export function GlobalRevealObserver() {
       { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     )
 
-    // Étape 2 : observer tous les éléments .reveal déjà dans le DOM
-    const observe = () => {
-      document.querySelectorAll('.reveal:not(.shown)').forEach((el) => obs.observe(el))
-    }
+    document.querySelectorAll('.reveal:not(.shown)').forEach((el) => obs.observe(el))
 
-    observe()
-
-    // Étape 3 : observer les nouveaux éléments ajoutés dynamiquement (navigation SPA)
-    const mutObs = new MutationObserver(observe)
+    // ÉTAPE 4 — re-observer si de nouveaux éléments .reveal apparaissent
+    // (navigation entre pages en SPA)
+    const mutObs = new MutationObserver(() => {
+      document.querySelectorAll<HTMLElement>('.reveal:not(.shown)').forEach((el) => {
+        const rect = el.getBoundingClientRect()
+        if (rect.top < window.innerHeight + 60 && rect.bottom > 0) {
+          el.classList.add('shown')
+        } else {
+          obs.observe(el)
+        }
+      })
+    })
     mutObs.observe(document.body, { childList: true, subtree: true })
 
     return () => {

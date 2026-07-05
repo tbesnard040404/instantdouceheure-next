@@ -12,6 +12,11 @@ interface RevealWrapperProps {
   id?: string
 }
 
+/**
+ * Composant wrapper qui ajoute la classe "reveal" sur son élément.
+ * L'animation est gérée globalement par GlobalRevealObserver.
+ * Ce composant n'a plus son propre observer pour éviter les conflits.
+ */
 export function RevealWrapper({
   children,
   className,
@@ -25,19 +30,16 @@ export function RevealWrapper({
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('shown')
-            obs.unobserve(e.target)
-          }
-        })
-      },
-      { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
+
+    // Si l'élément est déjà visible dans le viewport au montage, le montrer immédiatement
+    const rect = el.getBoundingClientRect()
+    if (rect.top < window.innerHeight + 60 && rect.bottom > 0) {
+      el.classList.add('shown')
+      return
+    }
+
+    // Sinon, laisser GlobalRevealObserver le gérer via IntersectionObserver
+    // (le MutationObserver dans GlobalRevealObserver capte les nouveaux éléments)
   }, [])
 
   const delayClass = delay ? `d${delay}` : ''
