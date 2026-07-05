@@ -341,9 +341,12 @@ a:hover { color:var(--sand); }
 @keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeIn { from{opacity:0} to{opacity:1} }
 @keyframes pulse { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
-.reveal { opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.25,.46,.45,.94),transform .7s cubic-bezier(.25,.46,.45,.94); }
-.reveal.shown { opacity:1; transform:translateY(0); }
-.reveal.d1{transition-delay:.1s} .reveal.d2{transition-delay:.2s} .reveal.d3{transition-delay:.3s} .reveal.d4{transition-delay:.4s} .reveal.d5{transition-delay:.5s}
+/* Les éléments .reveal sont visibles par défaut (pas de JS = pas de bug).
+   Quand JS est prêt, il ajoute .js-ready sur <html> → on peut alors cacher
+   et animer les éléments en toute sécurité. */
+.js-ready .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.25,.46,.45,.94),transform .7s cubic-bezier(.25,.46,.45,.94); }
+.js-ready .reveal.shown { opacity:1; transform:translateY(0); }
+.js-ready .reveal.d1{transition-delay:.1s} .js-ready .reveal.d2{transition-delay:.2s} .js-ready .reveal.d3{transition-delay:.3s} .js-ready .reveal.d4{transition-delay:.4s} .js-ready .reveal.d5{transition-delay:.5s}
 
 /* RESPONSIVE */
 .section,.trust,.info-strip,.cta-sec,.page-hero,.footer { max-width:100vw; overflow:hidden; }

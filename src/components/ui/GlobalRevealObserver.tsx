@@ -3,12 +3,15 @@
 import { useEffect } from 'react'
 
 /**
- * Observer global qui surveille TOUS les éléments .reveal dans le DOM,
- * qu'ils soient wrappés dans <RevealWrapper> ou codés en dur en JSX.
- * Ajoute la classe "shown" dès qu'un élément entre dans le viewport.
+ * 1. Ajoute .js-ready sur <html> → le CSS peut maintenant masquer les .reveal
+ * 2. Observe immédiatement tous les .reveal pour les animer à l'entrée dans le viewport
+ * Approche progressive : sans JS, tous les éléments restent visibles.
  */
 export function GlobalRevealObserver() {
   useEffect(() => {
+    // Étape 1 : signaler que JS est actif
+    document.documentElement.classList.add('js-ready')
+
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -18,17 +21,17 @@ export function GlobalRevealObserver() {
           }
         })
       },
-      { threshold: 0.06, rootMargin: '0px 0px -30px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     )
 
+    // Étape 2 : observer tous les éléments .reveal déjà dans le DOM
     const observe = () => {
       document.querySelectorAll('.reveal:not(.shown)').forEach((el) => obs.observe(el))
     }
 
-    // Observer au montage
     observe()
 
-    // Re-observer si de nouveaux éléments .reveal apparaissent (navigation SPA)
+    // Étape 3 : observer les nouveaux éléments ajoutés dynamiquement (navigation SPA)
     const mutObs = new MutationObserver(observe)
     mutObs.observe(document.body, { childList: true, subtree: true })
 
