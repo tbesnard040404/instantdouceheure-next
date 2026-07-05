@@ -5,8 +5,6 @@ export const metadata = {
   description: "Offrez un moment de bien-être à vos proches. 7 cartes cadeaux de 35€ à 250€, valables 6 mois.",
 }
 
-const EMAIL = 'oceane.delannoy.ferrero@gmail.com'
-
 export default function CadeauxPage() {
   return (
     <>
@@ -48,7 +46,7 @@ export default function CadeauxPage() {
               <div className="gift-card__body">
                 <div className="gift-card__price">35 €</div>
                 <p className="gift-card__desc">Massage bien-être 30 min</p>
-                <a href={`mailto:${EMAIL}?subject=Carte cadeau 35€`} className="btn btn--primary btn--sm">Commander</a>
+                <a href="https://buy.stripe.com/3cI9ATfUk5fZ7bC20C6c00f" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Offrir ce montant →</a>
               </div>
             </article>
 
@@ -70,7 +68,7 @@ export default function CadeauxPage() {
               <div className="gift-card__body">
                 <div className="gift-card__price">50 €</div>
                 <p className="gift-card__desc">Massage bien-être 45 min</p>
-                <a href={`mailto:${EMAIL}?subject=Carte cadeau 50€`} className="btn btn--primary btn--sm">Commander</a>
+                <a href="https://buy.stripe.com/5kQbJ1fUkaAj9jK48K6c00g" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Offrir ce montant →</a>
               </div>
             </article>
 
@@ -91,7 +89,7 @@ export default function CadeauxPage() {
               <div className="gift-card__body">
                 <div className="gift-card__price">75 €</div>
                 <p className="gift-card__desc">Massage bien-être 1h</p>
-                <a href={`mailto:${EMAIL}?subject=Carte cadeau 75€`} className="btn btn--primary btn--sm">Commander</a>
+                <a href="https://buy.stripe.com/7sYbJ10Zq0ZJ9jK7kW6c00l" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Offrir ce montant →</a>
               </div>
             </article>
 
@@ -117,7 +115,7 @@ export default function CadeauxPage() {
               <div className="gift-card__body">
                 <div className="gift-card__price">95 €</div>
                 <p className="gift-card__desc">Massage bien-être 1h30</p>
-                <a href={`mailto:${EMAIL}?subject=Carte cadeau 95€`} className="btn btn--primary btn--sm">Commander</a>
+                <a href="https://buy.stripe.com/3cIeVd37ydMvfI86gS6c00h" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Offrir ce montant →</a>
               </div>
             </article>
 
@@ -143,11 +141,11 @@ export default function CadeauxPage() {
               <div className="gift-card__body">
                 <div className="gift-card__price">150 €</div>
                 <p className="gift-card__desc">Massage bien-être 2h</p>
-                <a href={`mailto:${EMAIL}?subject=Carte cadeau 150€`} className="btn btn--primary btn--sm">Commander</a>
+                <a href="https://buy.stripe.com/eVq9AT37ybEn3Zq8p06c00i" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Offrir ce montant →</a>
               </div>
             </article>
 
-            {/* 200€ */}
+            {/* 180€ */}
             <article className="gift-card reveal d2">
               <div className="gift-card__visual gift-card__visual--200" style={{ height: 196 }} aria-hidden="true">
                 <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 96, height: 96 }}>
@@ -170,9 +168,9 @@ export default function CadeauxPage() {
                 </svg>
               </div>
               <div className="gift-card__body">
-                <div className="gift-card__price">200 €</div>
-                <p className="gift-card__desc">Carte cadeau libre</p>
-                <a href={`mailto:${EMAIL}?subject=Carte cadeau 200€`} className="btn btn--primary btn--sm">Commander</a>
+                <div className="gift-card__price">180 €</div>
+                <p className="gift-card__desc">Massage bien-être · Carte libre</p>
+                <a href="https://buy.stripe.com/dRmeVd0ZqfUDbrS20C6c00k" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Offrir ce montant →</a>
               </div>
             </article>
 
@@ -207,7 +205,7 @@ export default function CadeauxPage() {
               <div className="gift-card__body">
                 <div className="gift-card__price">250 €</div>
                 <p className="gift-card__desc">Soin Rituel Rebozo complet · 2h30 · Le cadeau le plus précieux</p>
-                <a href={`mailto:${EMAIL}?subject=Carte cadeau Rebozo 250€`} className="btn btn--sand btn--sm">Commander le Rebozo</a>
+                <a href="https://buy.stripe.com/fZu6oH37yaAj1RicFg6c00j" target="_blank" rel="noopener noreferrer" className="btn btn--sand btn--sm">Offrir le Rebozo →</a>
               </div>
             </article>
 

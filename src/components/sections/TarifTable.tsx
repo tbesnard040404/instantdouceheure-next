@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 interface TarifRow {
   duree: string
@@ -81,9 +81,8 @@ export function TarifTable() {
         </thead>
         <tbody>
           {tarifs.map((row, i) => (
-            <>
+            <React.Fragment key={i}>
               <tr
-                key={`row-${i}`}
                 className={`tarif-row${openIndex === i ? ' tarif-row--open' : ''}`}
                 onClick={() => toggle(i)}
                 aria-expanded={openIndex === i}
@@ -100,11 +99,11 @@ export function TarifTable() {
                 <td className="price">{row.prix}</td>
               </tr>
               {openIndex === i && (
-                <tr key={`desc-${i}`} className="tarif-desc-row" style={{ display: 'table-row' }}>
+                <tr className="tarif-desc-row" style={{ display: 'table-row' }}>
                   <td colSpan={3}>{row.description}</td>
                 </tr>
               )}
-            </>
+            </React.Fragment>
           ))}
         </tbody>
       </table>
