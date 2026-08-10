@@ -25,13 +25,6 @@
       "description": "La séance complète par excellence. Prise en charge globale du corps, du visage et de la tête selon vos besoins. Entretien de 5 à 10 minutes en début de séance, choix des huiles personnalisé, temps d'intégration final inclus."
     },
     {
-      "duree": "1h15",
-      "type": "Massage bien-être en duo",
-      "typeDetail": "· réalisé avec Céline · 2 personnes",
-      "prix": "180 €",
-      "description": "Partagez un moment de bien-être à deux — en couple, entre amis, entre parent et enfant. Séance réalisée en duo avec Céline : chaque personne bénéficie d'1h15 de massage personnalisé en simultané (soit 90 € par personne). À réserver via le formulaire de contact, environ un mois avant la date souhaitée."
-    },
-    {
       "duree": "1h30",
       "type": "Massage bien-être",
       "typeDetail": "",
@@ -44,6 +37,13 @@
       "typeDetail": "",
       "prix": "150 €",
       "description": "L'expérience ultime du massage holistique. Deux heures consacrées entièrement à votre bien-être : corps, visage, cuir chevelu, pieds. Soin complet avec huiles de massage haut de gamme sélectionnées selon votre profil. Un voyage sensoriel profond."
+    },
+    {
+      "duree": "1h15",
+      "type": "Massage bien-être en duo",
+      "typeDetail": "· réalisé avec Céline · 2 personnes",
+      "prix": "180 €",
+      "description": "Partagez un moment de bien-être à deux — en couple, entre amis, entre parent et enfant. Séance réalisée en duo avec Céline : chaque personne bénéficie d'1h15 de massage personnalisé en simultané (soit 90 € par personne). À réserver via le formulaire de contact, environ un mois avant la date souhaitée."
     },
     {
       "duree": "1h15",
