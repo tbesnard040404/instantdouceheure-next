@@ -16,22 +16,21 @@
         "🤲 Massages",
         "🎨 Ateliers créatifs"
       ],
-      "cta": "Réserver",
-      "ctaLink": "https://book.stripe.com/aFa28rcI8eQz1RigVw6c001"
+      "cta": "Réserver"
     },
     {
-      "tag": "Mixte · Novembre 2026",
+      "tag": "Mixte · Novembre 2027",
       "title": "Le chemin des 5 éléments",
-      "date": "Novembre 2026",
+      "date": "Novembre 2027",
       "location": "Retraite mixte",
       "activities": [
         "🤲 Massages",
         "💃 Danse libre",
         "✨ Travail énergétique",
-        "🍫 Cérémonie cacao"
+        "🍫 Cérémonie cacao",
+        "Reconnexion avec chaque éléments"
       ],
-      "cta": "Réserver",
-      "ctaLink": "https://book.stripe.com/00w8wP7nOgYHgMcdJk6c000"
+      "cta": "Réserver"
     }
   ]
 }
