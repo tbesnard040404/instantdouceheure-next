@@ -29,6 +29,20 @@ fragment HomeParts on Home {
     text
     cta
   }
+  abonnements {
+    __typename
+    eyebrow
+    title
+    text
+    cta
+  }
+  nature {
+    __typename
+    eyebrow
+    title
+    text
+    cta
+  }
   cta {
     __typename
     eyebrow

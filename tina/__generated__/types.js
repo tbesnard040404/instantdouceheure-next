@@ -37,6 +37,20 @@ export const HomePartsFragmentDoc = gql`
     text
     cta
   }
+  abonnements {
+    __typename
+    eyebrow
+    title
+    text
+    cta
+  }
+  nature {
+    __typename
+    eyebrow
+    title
+    text
+    cta
+  }
   cta {
     __typename
     eyebrow

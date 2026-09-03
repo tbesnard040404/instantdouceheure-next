@@ -141,6 +141,20 @@ type HomePhilosophy {
   cta: String
 }
 
+type HomeAbonnements {
+  eyebrow: String
+  title: String
+  text: String
+  cta: String
+}
+
+type HomeNature {
+  eyebrow: String
+  title: String
+  text: String
+  cta: String
+}
+
 type HomeCta {
   eyebrow: String
   title: String
@@ -153,6 +167,8 @@ type Home implements Node & Document {
   hero: HomeHero
   services: HomeServices
   philosophy: HomePhilosophy
+  abonnements: HomeAbonnements
+  nature: HomeNature
   cta: HomeCta
   id: ID!
   _sys: SystemInfo!
@@ -196,6 +212,20 @@ input HomePhilosophyFilter {
   cta: StringFilter
 }
 
+input HomeAbonnementsFilter {
+  eyebrow: StringFilter
+  title: StringFilter
+  text: StringFilter
+  cta: StringFilter
+}
+
+input HomeNatureFilter {
+  eyebrow: StringFilter
+  title: StringFilter
+  text: StringFilter
+  cta: StringFilter
+}
+
 input HomeCtaFilter {
   eyebrow: StringFilter
   title: StringFilter
@@ -208,6 +238,8 @@ input HomeFilter {
   hero: HomeHeroFilter
   services: HomeServicesFilter
   philosophy: HomePhilosophyFilter
+  abonnements: HomeAbonnementsFilter
+  nature: HomeNatureFilter
   cta: HomeCtaFilter
 }
 
@@ -706,6 +738,20 @@ input HomePhilosophyMutation {
   cta: String
 }
 
+input HomeAbonnementsMutation {
+  eyebrow: String
+  title: String
+  text: String
+  cta: String
+}
+
+input HomeNatureMutation {
+  eyebrow: String
+  title: String
+  text: String
+  cta: String
+}
+
 input HomeCtaMutation {
   eyebrow: String
   title: String
@@ -718,6 +764,8 @@ input HomeMutation {
   hero: HomeHeroMutation
   services: HomeServicesMutation
   philosophy: HomePhilosophyMutation
+  abonnements: HomeAbonnementsMutation
+  nature: HomeNatureMutation
   cta: HomeCtaMutation
 }
 
