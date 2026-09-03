@@ -85,6 +85,28 @@ export default defineConfig({
           },
           {
             type: 'object',
+            name: 'abonnements',
+            label: 'Section Abonnements (teaser)',
+            fields: [
+              { type: 'string', name: 'eyebrow', label: 'Étiquette au-dessus du titre' },
+              { type: 'string', name: 'title', label: 'Titre' },
+              { type: 'string', name: 'text', label: 'Texte', ui: { component: 'textarea' } },
+              { type: 'string', name: 'cta', label: 'Texte du bouton' },
+            ],
+          },
+          {
+            type: 'object',
+            name: 'nature',
+            label: 'Section Expérience au cœur de la nature',
+            fields: [
+              { type: 'string', name: 'eyebrow', label: 'Étiquette au-dessus du titre' },
+              { type: 'string', name: 'title', label: 'Titre' },
+              { type: 'string', name: 'text', label: 'Texte', ui: { component: 'textarea' } },
+              { type: 'string', name: 'cta', label: 'Texte du bouton' },
+            ],
+          },
+          {
+            type: 'object',
             name: 'cta',
             label: 'Bandeau CTA (bas de page)',
             fields: [
