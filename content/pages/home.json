@@ -38,6 +38,18 @@
     "text": "Passionnée de massage depuis l'enfance, Océane a développé une approche holistique qui va au-delà de la technique — une présence pleine, un toucher juste, un accompagnement du vivant.",
     "cta": "Ma démarche"
   },
+  "abonnements": {
+    "eyebrow": "Abonnements",
+    "title": "Un soin régulier pour un bien-être durable",
+    "text": "Des formules adaptées à votre rythme, pour prendre soin de vous tout au long de l'année.",
+    "cta": "Voir les formules"
+  },
+  "nature": {
+    "eyebrow": "Retraites & Ateliers",
+    "title": "Expérience au cœur de la nature",
+    "text": "Des retraites et ateliers en pleine nature pour reconnecter votre corps, votre souffle et votre intuition.",
+    "cta": "Découvrir les retraites"
+  },
   "cta": {
     "eyebrow": "Prêt(e) à commencer ?",
     "title": "Offrez-vous un moment rien que pour vous",
