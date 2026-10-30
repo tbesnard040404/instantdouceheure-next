@@ -176,6 +176,7 @@ fragment CollaborationsParts on Collaborations {
     name
     role
     desc
+    url
   }
 }
 

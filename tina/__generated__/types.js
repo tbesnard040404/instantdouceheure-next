@@ -191,6 +191,7 @@ export const CollaborationsPartsFragmentDoc = gql`
     name
     role
     desc
+    url
   }
 }
     `;

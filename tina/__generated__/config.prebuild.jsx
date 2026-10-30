@@ -359,7 +359,8 @@ var config_default = defineConfig({
               { type: "string", name: "initials", label: "Initiales (ex: CB)" },
               { type: "string", name: "name", label: "Nom complet" },
               { type: "string", name: "role", label: "R\xF4le / Titre" },
-              { type: "string", name: "desc", label: "Description", ui: { component: "textarea" } }
+              { type: "string", name: "desc", label: "Description", ui: { component: "textarea" } },
+              { type: "string", name: "url", label: "Lien vers son site (bouton \xAB Voir le site \xBB, facultatif)" }
             ]
           }
         ]

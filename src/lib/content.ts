@@ -144,6 +144,7 @@ export interface CollaborationsContent {
     name: string
     role: string
     desc: string
+    url?: string
   }>
 }
 

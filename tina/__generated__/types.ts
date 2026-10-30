@@ -805,6 +805,7 @@ export type CollaborationsCollabs = {
   name?: Maybe<Scalars['String']['output']>;
   role?: Maybe<Scalars['String']['output']>;
   desc?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<Scalars['String']['output']>;
 };
 
 export type Collaborations = Node & Document & {
@@ -824,6 +825,7 @@ export type CollaborationsCollabsFilter = {
   name?: InputMaybe<StringFilter>;
   role?: InputMaybe<StringFilter>;
   desc?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
 };
 
 export type CollaborationsFilter = {
@@ -1268,6 +1270,7 @@ export type CollaborationsCollabsMutation = {
   name?: InputMaybe<Scalars['String']['input']>;
   role?: InputMaybe<Scalars['String']['input']>;
   desc?: InputMaybe<Scalars['String']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type CollaborationsMutation = {
@@ -1484,6 +1487,7 @@ export type CollaborationsCollabsFilter = {
   name?: StringFilter | null | undefined;
   role?: StringFilter | null | undefined;
   desc?: StringFilter | null | undefined;
+  url?: StringFilter | null | undefined;
 };
 
 export type CollaborationsFilter = {
@@ -1524,7 +1528,7 @@ export type PhilosophiePartsFragment = { __typename: 'Philosophie', pageTitle: s
 
 export type ContactPartsFragment = { __typename: 'Contact', pageTitle: string | null, pageSubtitle: string | null, notice: string | null, address: string | null, phone: string | null, email: string | null, hoursWeek: string | null, hoursSunday: string | null, hoursSundayNote: string | null };
 
-export type CollaborationsPartsFragment = { __typename: 'Collaborations', pageTitle: string | null, pageSubtitle: string | null, introTitle: string | null, introText: string | null, collabs: Array<{ __typename: 'CollaborationsCollabs', initials: string | null, name: string | null, role: string | null, desc: string | null } | null> | null };
+export type CollaborationsPartsFragment = { __typename: 'Collaborations', pageTitle: string | null, pageSubtitle: string | null, introTitle: string | null, introText: string | null, collabs: Array<{ __typename: 'CollaborationsCollabs', initials: string | null, name: string | null, role: string | null, desc: string | null, url: string | null } | null> | null };
 
 export type SettingsPartsFragment = { __typename: 'Settings', siteName: string | null, siteTagline: string | null, planityUrl: string | null, instagramUrl: string | null, facebookUrl: string | null, formspreeId: string | null, siret: string | null, footer: { __typename: 'SettingsFooter', description: string | null, copyright: string | null } | null };
 
@@ -1666,7 +1670,7 @@ export type CollaborationsQueryVariables = Exact<{
 }>;
 
 
-export type CollaborationsQuery = { collaborations: { __typename: 'Collaborations', id: string, pageTitle: string | null, pageSubtitle: string | null, introTitle: string | null, introText: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, collabs: Array<{ __typename: 'CollaborationsCollabs', initials: string | null, name: string | null, role: string | null, desc: string | null } | null> | null } };
+export type CollaborationsQuery = { collaborations: { __typename: 'Collaborations', id: string, pageTitle: string | null, pageSubtitle: string | null, introTitle: string | null, introText: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, collabs: Array<{ __typename: 'CollaborationsCollabs', initials: string | null, name: string | null, role: string | null, desc: string | null, url: string | null } | null> | null } };
 
 export type CollaborationsConnectionQueryVariables = Exact<{
   before?: string | null | undefined;
@@ -1678,7 +1682,7 @@ export type CollaborationsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type CollaborationsConnectionQuery = { collaborationsConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Collaborations', id: string, pageTitle: string | null, pageSubtitle: string | null, introTitle: string | null, introText: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, collabs: Array<{ __typename: 'CollaborationsCollabs', initials: string | null, name: string | null, role: string | null, desc: string | null } | null> | null } | null } | null> | null } };
+export type CollaborationsConnectionQuery = { collaborationsConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Collaborations', id: string, pageTitle: string | null, pageSubtitle: string | null, introTitle: string | null, introText: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, collabs: Array<{ __typename: 'CollaborationsCollabs', initials: string | null, name: string | null, role: string | null, desc: string | null, url: string | null } | null> | null } | null } | null> | null } };
 
 export type SettingsQueryVariables = Exact<{
   relativePath: string;
@@ -1885,6 +1889,7 @@ export const CollaborationsPartsFragmentDoc = gql`
     name
     role
     desc
+    url
   }
 }
     `;

@@ -572,6 +572,7 @@ type CollaborationsCollabs {
   name: String
   role: String
   desc: String
+  url: String
 }
 
 type Collaborations implements Node & Document {
@@ -590,6 +591,7 @@ input CollaborationsCollabsFilter {
   name: StringFilter
   role: StringFilter
   desc: StringFilter
+  url: StringFilter
 }
 
 input CollaborationsFilter {
@@ -886,6 +888,7 @@ input CollaborationsCollabsMutation {
   name: String
   role: String
   desc: String
+  url: String
 }
 
 input CollaborationsMutation {

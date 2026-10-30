@@ -3,7 +3,7 @@ import { getCollaborationsContent } from '@/lib/content'
 
 export const metadata = {
   title: "Collaborations — Instant Douce'Heure",
-  description: "Les partenaires de cœur d'Océane : Céline Boucher, Jérémy, Marie Matis.",
+  description: "Les partenaires de cœur d'Océane : Céline Boucher, Jérémy Anquetin, Valentine Prete.",
 }
 
 const avClasses = ['av--1', 'av--2', 'av--3']
@@ -41,6 +41,17 @@ export default function CollaborationsPage() {
                 <h3 className="collab-card__name">{col.name}</h3>
                 <p className="collab-card__role">{col.role}</p>
                 <p className="collab-card__desc">{col.desc}</p>
+                {col.url && (
+                  <a
+                    href={col.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn--secondary btn--sm"
+                    style={{ marginTop: '1rem', display: 'inline-flex' }}
+                  >
+                    Voir le site
+                  </a>
+                )}
               </article>
             ))}
           </div>

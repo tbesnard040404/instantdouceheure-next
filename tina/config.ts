@@ -375,6 +375,7 @@ export default defineConfig({
               { type: 'string', name: 'name', label: 'Nom complet' },
               { type: 'string', name: 'role', label: 'Rôle / Titre' },
               { type: 'string', name: 'desc', label: 'Description', ui: { component: 'textarea' } },
+              { type: 'string', name: 'url', label: 'Lien vers son site (bouton « Voir le site », facultatif)' },
             ],
           },
         ],

@@ -8,19 +8,22 @@
       "initials": "CB",
       "name": "Céline Boucher",
       "role": "Masseuse holistique",
-      "desc": "Formée avec Océane en 2015, Céline apporte professionnalisme et écoute fine du corps subtil. Elle reçoit au cabinet les vendredis, samedis et dimanches sur rendez-vous."
+      "desc": "Formée avec Océane en 2015, Céline apporte professionnalisme et écoute fine du corps subtil. Elle reçoit au cabinet les vendredis, samedis et dimanches sur rendez-vous.",
+      "url": "https://www.cocoontouch.fr/"
     },
     {
       "initials": "JA",
       "name": "Jérémy Anquetin",
       "role": "Co-créateur · Ateliers paysagistes - Ve'j'tal",
-      "desc": "Paysagiste depuis 2019, Jérémy co-crée avec Océane les ateliers nature du domaine Milélé. Ensemble, ils ont acquis ce terrain de 2 500 m² en forêt normande pour offrir des espaces de reconnexion profonde à la nature."
+      "desc": "Paysagiste depuis 2019, Jérémy co-crée avec Océane les ateliers nature du domaine Milélé. Ensemble, ils ont acquis ce terrain de 2 500 m² en forêt normande pour offrir des espaces de reconnexion profonde à la nature.",
+      "url": "https://vejtal.com/"
     },
     {
       "initials": "VP",
       "name": "Valentine Prete",
       "role": "Jardinière des âmes · intuitive",
-      "desc": "Valentine est une amoureuse de la nature, où elle puise toute son inspiration. Elle est à la fois, cheffe d'entreprise pour réensemencer le monde via l'agriculture régénérative et, révélatrice des potentiels, insufflant ces vérités fines qui nous percutent en plein coeur. \nPour mieux savoir ce qu'elle fait :  seedsofgeneration.nl   et svedah_garden sur insta !"
+      "desc": "Valentine est une amoureuse de la nature, où elle puise toute son inspiration. Elle est à la fois, cheffe d'entreprise pour réensemencer le monde via l'agriculture régénérative et, révélatrice des potentiels, insufflant ces vérités fines qui nous percutent en plein coeur. \nPour mieux savoir ce qu'elle fait :  seedsofgeneration.nl   et svedah_garden sur insta !",
+      "url": "https://www.seedsofregeneration.nl/"
     }
   ]
 }
