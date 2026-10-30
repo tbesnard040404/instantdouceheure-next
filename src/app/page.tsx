@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { RevealWrapper } from '@/components/ui/RevealWrapper'
-import { getHomeContent, getSiteSettings } from '@/lib/content'
+import { getHomeContent, getRetraitesContent, getSiteSettings } from '@/lib/content'
 
 // SVG illustrations inline (zéro dépendance externe)
 function MassageSvg() {
@@ -51,6 +51,7 @@ const cardLinks = ['/tarifs', '/tarifs', '/tarifs']
 
 export default function HomePage() {
   const c = getHomeContent()
+  const retraites = getRetraitesContent()
   const s = getSiteSettings()
 
   return (
@@ -181,32 +182,21 @@ export default function HomePage() {
             <Link href="/retraites" className="btn btn--secondary">Tout voir</Link>
           </RevealWrapper>
           <div className="retreat-grid">
-            <article className="retreat-card reveal d1">
-              <div className="retreat-card__bg retreat-card__bg--f" aria-hidden="true" />
-              <div className="retreat-card__overlay" aria-hidden="true" />
-              <div className="retreat-card__content">
-                <span className="retreat-card__tag">Retraite 2026</span>
-                <h3 className="retreat-card__title">Retrouver son pouvoir féminin</h3>
-                <div className="retreat-card__meta">
-                  <span>🗓 2026 · Dates à venir</span>
-                  <span>📍 Nature normande</span>
+            {retraites.retreats.map((r, i) => (
+              <article key={r.title} className={`retreat-card reveal d${i + 1}`}>
+                <div className={`retreat-card__bg retreat-card__bg--${i % 2 === 0 ? 'f' : 'e'}`} aria-hidden="true" />
+                <div className="retreat-card__overlay" aria-hidden="true" />
+                <div className="retreat-card__content">
+                  <span className="retreat-card__tag">{r.tag}</span>
+                  <h3 className="retreat-card__title">{r.title}</h3>
+                  <div className="retreat-card__meta">
+                    <span>🗓 {r.date.trim()}</span>
+                    <span>📍 {r.location}</span>
+                  </div>
+                  <Link href="/retraites" className="btn btn--ghost btn--sm">Découvrir</Link>
                 </div>
-                <Link href="/retraites" className="btn btn--ghost btn--sm">Découvrir</Link>
-              </div>
-            </article>
-            <article className="retreat-card reveal d2">
-              <div className="retreat-card__bg retreat-card__bg--e" aria-hidden="true" />
-              <div className="retreat-card__overlay" aria-hidden="true" />
-              <div className="retreat-card__content">
-                <span className="retreat-card__tag">Ateliers</span>
-                <h3 className="retreat-card__title">Le chemin des 5 éléments</h3>
-                <div className="retreat-card__meta">
-                  <span>🗓 Novembre 2026</span>
-                  <span>🌿 Massages · Méditation · Cacao</span>
-                </div>
-                <Link href="/retraites" className="btn btn--ghost btn--sm">Découvrir</Link>
-              </div>
-            </article>
+              </article>
+            ))}
           </div>
         </div>
       </section>

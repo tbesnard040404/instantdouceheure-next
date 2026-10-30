@@ -17,7 +17,7 @@ export function Footer() {
             </p>
             <div className="footer__social">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=100054579724608"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__soc-link"
@@ -26,7 +26,7 @@ export function Footer() {
                 f
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/instantdouceheure_lh/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__soc-link"
@@ -97,9 +97,9 @@ export function Footer() {
         <div className="footer__bottom">
           <p className="footer__copy">© 2026 Instant Douce&apos;Heure · Océane Delannoy-Ferrero</p>
           <nav className="footer__legal" aria-label="Liens légaux">
-            <Link href="#">Mentions légales</Link>
-            <Link href="#">Politique de confidentialité</Link>
-            <Link href="#">RGPD</Link>
+            <Link href="/mentions-legales">Mentions légales</Link>
+            <Link href="/confidentialite">Politique de confidentialité</Link>
+            <Link href="/rgpd">RGPD</Link>
           </nav>
         </div>
       </div>
