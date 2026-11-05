@@ -6,6 +6,15 @@ export const metadata = {
   description: "5 formules d'abonnement annuel pour un suivi bien-être régulier à un tarif avantageux.",
 }
 
+// Clés = champ "name" éditable dans Tina : un plan renommé retombe sur le lien contact.
+const STRIPE_LINKS: Record<string, string> = {
+  Essentiel: 'https://buy.stripe.com/bJe00jaA0aAjdA048K6c00m',
+  Régulier: 'https://buy.stripe.com/00w5kD0ZqgYHcvW20C6c00n',
+  Intensif: 'https://buy.stripe.com/14A3cv23ubEnanO8p06c00o',
+  Grossesse: 'https://buy.stripe.com/00w8wP9vW7o753u8p06c00p',
+  Périnatalité: 'https://buy.stripe.com/3cIaEX7nO8sbdA0bBc6c00q',
+}
+
 export default function AbonnementsPage() {
   const c = getAbonnementsContent()
 
@@ -50,12 +59,23 @@ export default function AbonnementsPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact?sujet=Abonnement+annuel"
-                  className={plan.popular ? 'btn btn--sand btn--sm' : 'btn btn--secondary btn--sm'}
-                >
-                  S&apos;inscrire
-                </Link>
+                {STRIPE_LINKS[plan.name] ? (
+                  <a
+                    href={STRIPE_LINKS[plan.name]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={plan.popular ? 'btn btn--sand btn--sm' : 'btn btn--secondary btn--sm'}
+                  >
+                    S&apos;inscrire
+                  </a>
+                ) : (
+                  <Link
+                    href="/contact?sujet=Abonnement+annuel"
+                    className={plan.popular ? 'btn btn--sand btn--sm' : 'btn btn--secondary btn--sm'}
+                  >
+                    S&apos;inscrire
+                  </Link>
+                )}
               </div>
             ))}
           </div>
