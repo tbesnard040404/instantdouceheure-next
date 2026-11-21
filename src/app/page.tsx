@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { RevealWrapper } from '@/components/ui/RevealWrapper'
+import { NouveautesBanner } from '@/components/sections/NouveautesBanner'
 import { getHomeContent, getRetraitesContent, getSiteSettings } from '@/lib/content'
 
 // SVG illustrations inline (zéro dépendance externe)
@@ -61,6 +62,7 @@ export default function HomePage() {
         <div className="hero__bg" aria-hidden="true" />
         <div className="container">
           <div className="hero__content">
+            <NouveautesBanner />
             <p className="hero__eyebrow">{c.hero.eyebrow}</p>
             <h1 className="hero__title">
               {c.hero.title.split("'")[0]}&apos;<br /><em>{c.hero.title.split("'")[1] ?? ''}</em>
@@ -152,7 +154,8 @@ export default function HomePage() {
           </RevealWrapper>
           <div className="plans-scroll reveal d1">
             {[
-              { name: 'Essentiel', price: '32€', period: '1h par période scolaire · 12 mois', desc: "6 séances par an, espacées selon les vacances scolaires. 1 séance offerte à l'inscription." },
+              { name: 'Petit budget', price: '32€', period: '1h par période scolaire · 12 mois', desc: "6 séances par an, espacées selon les vacances scolaires. 1 séance offerte à l'inscription." },
+              { name: "L'essentiel", price: '46€', period: '45 min par mois · 12 mois', desc: "12 séances de massage personnalisé, dont 1 offerte, adaptées à vos besoins." },
               { name: 'Régulier', price: '63€', period: '1h par mois · 12 mois', desc: "Suivi mensuel personnalisé avec 2 séances offertes incluses dans l'abonnement.", pop: true },
               { name: 'Intensif', price: '79€', period: '1h30 par mois · 12 mois', desc: "Séances approfondies d'1h15 de soin + consultation. 2 séances offertes incluses." },
               { name: 'Grossesse', price: '67€', period: '12 mois · 9 séances', desc: "Accompagnement personnalisé tout au long de la grossesse, du premier trimestre jusqu'à l'accouchement." },

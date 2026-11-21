@@ -185,6 +185,48 @@ export default function AteliersPage() {
         </div>
       </header>
 
+      <section className="section section--alt" aria-labelledby="bien-etre-a-deux-title">
+        <div className="container">
+          <div id="bien-etre-a-deux" className="atelier-cabinet reveal" style={{ maxWidth: 760, marginLeft: 'auto', marginRight: 'auto' }}>
+            <p className="eyebrow">Nouveau · Au cabinet</p>
+            <h2 id="bien-etre-a-deux-title">Atelier bien-être à deux</h2>
+            <div className="divider" />
+            <p style={{ fontSize: '1.0625rem', color: 'var(--text-muted)' }}>
+              Un atelier dédié au bien-être et à la connexion entre deux personnes : en couple, entre ami·e·s ou entre parent et enfant. Il se veut personnalisable et s&apos;adapte à chaque binôme.
+            </p>
+            <ul style={{ margin: '1.25rem 0', paddingLeft: '1.25rem', lineHeight: 1.75, listStyle: 'disc' }}>
+              <li><strong>Quand :</strong> le premier samedi de chaque mois, de 17h30 à 20h (2h30)</li>
+              <li><strong>Où :</strong> au cabinet, 23 rue Jules Ancel, 76600 Le Havre</li>
+              <li><strong>Tarif :</strong> 70&nbsp;€ par personne, à réserver pour deux</li>
+            </ul>
+            <p style={{ fontWeight: 600, marginBottom: '.5rem' }}>L&apos;atelier comprend</p>
+            <ul style={{ margin: '0 0 1.25rem', paddingLeft: '1.25rem', lineHeight: 1.75, listStyle: 'disc' }}>
+              <li>Un rituel de bienvenue</li>
+              <li>Un massage pour chacun, au choix : pieds, mains ou crâne</li>
+              <li>Un apéro</li>
+              <li>3 activités à choisir parmi 5</li>
+            </ul>
+            <p style={{ fontWeight: 600, marginBottom: '.5rem' }}>Les 5 activités proposées</p>
+            <ul style={{ margin: '0 0 1.75rem', paddingLeft: '1.25rem', lineHeight: 1.75, listStyle: 'disc' }}>
+              <li>Méditation guidée personnalisée</li>
+              <li>Tirage de cartes</li>
+              <li>Jeux de confiance</li>
+              <li>Jeux de questions-réponses pour se chérir</li>
+              <li>Apprendre à se masser : créer une petite routine adaptée au binôme</li>
+            </ul>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '.75rem' }}>
+              <a
+                href="mailto:oceane.delannoy.ferrero@gmail.com?subject=R%C3%A9servation%20atelier%20bien-%C3%AAtre%20%C3%A0%20deux"
+                className="btn btn--primary"
+              >
+                Réserver par email
+              </a>
+              <a href="tel:+33618980522" className="btn btn--secondary">06 18 98 05 22</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container">
           <div className="reveal" style={{ maxWidth: 760, marginBottom: '3.5rem' }}>

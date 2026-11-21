@@ -89,6 +89,7 @@ export function ContactForm() {
             <option value="Carte cadeau">Carte cadeau</option>
             <option value="Massage en duo">Massage en duo</option>
             <option value="Retraites 2026">Retraites 2026</option>
+            <option value="Atelier bien-être à deux">Atelier bien-être à deux</option>
             <option value="Ateliers Ve'j'tal">Ateliers Ve&apos;j&apos;tal</option>
             <option value="Autre">Autre</option>
           </select>

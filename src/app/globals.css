@@ -366,3 +366,14 @@ a:hover { color:var(--sand); }
 .legal ul.legal__facts { list-style:none; margin-left:0; }
 .legal a { color:var(--forest-mid); text-decoration:underline; text-underline-offset:2px; word-break:break-word; }
 .legal__updated { margin-top:2.5rem; font-size:.875rem; color:var(--text-muted); }
+
+/* Bannière nouveautés (jusqu'au 31/01/2027) */
+.nouveautes { display:flex; width:fit-content; flex-direction:column; gap:.5rem; max-width:min(100%,36rem); margin:0 0 2rem; padding:1rem 1.25rem; border:1px solid rgba(223,196,160,.55); border-radius:14px; background:rgba(26,44,36,.55); text-align:left; }
+.nouveautes__label { margin:0; font-size:.75rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--sand-light); }
+.nouveautes__list { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:.375rem; }
+.nouveautes__list a { display:inline-block; padding:.25rem 0; color:#fff; font-size:1rem; line-height:1.5; text-decoration:underline; text-decoration-color:rgba(223,196,160,.6); text-underline-offset:4px; }
+.nouveautes__list a:hover { color:var(--sand-light); }
+.nouveautes__list a:focus-visible { outline:2px solid var(--sand-light); outline-offset:3px; border-radius:4px; }
+.page-hero .nouveautes { margin-left:auto; margin-right:auto; }
+.atelier-cabinet { margin-bottom:3.5rem; scroll-margin-top:7rem; }
+#lessentiel { scroll-margin-top:7rem; }

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getAbonnementsContent } from '@/lib/content'
+import { NouveautesBanner } from '@/components/sections/NouveautesBanner'
 
 export const metadata = {
   title: "Abonnements Annuels — Instant Douce'Heure",
@@ -8,7 +9,8 @@ export const metadata = {
 
 // Clés = champ "name" éditable dans Tina : un plan renommé retombe sur le lien contact.
 const STRIPE_LINKS: Record<string, string> = {
-  Essentiel: 'https://buy.stripe.com/bJe00jaA0aAjdA048K6c00m',
+  'Petit budget': 'https://buy.stripe.com/bJe00jaA0aAjdA048K6c00m',
+  "L'essentiel": 'https://buy.stripe.com/eVq6oH4bC5fZgMccFg6c00r',
   Régulier: 'https://buy.stripe.com/00w5kD0ZqgYHcvW20C6c00n',
   Intensif: 'https://buy.stripe.com/14A3cv23ubEnanO8p06c00o',
   Grossesse: 'https://buy.stripe.com/00w8wP9vW7o753u8p06c00p',
@@ -22,6 +24,7 @@ export default function AbonnementsPage() {
     <>
       <header className="page-hero">
         <div className="container">
+          <NouveautesBanner />
           <nav className="breadcrumb" aria-label="Fil d'Ariane">
             <Link href="/">Accueil</Link>
             <span className="breadcrumb__sep">›</span>
@@ -35,7 +38,7 @@ export default function AbonnementsPage() {
       <section className="section">
         <div className="container">
           <div className="reveal" style={{ textAlign: 'center', marginBottom: '1rem' }}>
-            <p className="eyebrow" style={{ justifyContent: 'center' }}>5 formules disponibles</p>
+            <p className="eyebrow" style={{ justifyContent: 'center' }}>{c.plans.length} formules disponibles</p>
             <h2 style={{ whiteSpace: 'pre-line' }}>{c.sectionTitle}</h2>
             <div className="divider divider--center" />
             <p style={{ maxWidth: 600, margin: '0 auto', color: 'var(--text-muted)', fontSize: '1.0625rem' }}>
@@ -45,7 +48,7 @@ export default function AbonnementsPage() {
 
           <div className="plans-grid reveal">
             {c.plans.map((plan) => (
-              <div key={plan.name} className={`plan-card${plan.popular ? ' plan-card--pop' : ''}`}>
+              <div key={plan.name} id={plan.name === "L'essentiel" ? 'lessentiel' : undefined} className={`plan-card${plan.popular ? ' plan-card--pop' : ''}`}>
                 {plan.popular && <div className="plan-badge">Le plus choisi</div>}
                 <p className="plan-name">{plan.name}</p>
                 <div className="plan-price">{plan.price}<sub>/mois</sub></div>
