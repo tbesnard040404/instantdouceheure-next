@@ -78,12 +78,28 @@ export interface AteliersContent {
   introEyebrow: string
   introTitle: string
   introText: string
+  cabinet?: {
+    visible?: boolean
+    eyebrow?: string
+    title?: string
+    text?: string
+    details?: Array<{ label?: string; value?: string }>
+    includesTitle?: string
+    includes?: string[]
+    activitiesTitle?: string
+    activities?: string[]
+    ctaLabel?: string
+    ctaLink?: string
+    emailSubject?: string
+  }
   items: Array<{
     title: string
     price: string
     priceUnit: string
     desc: string
     date: string
+    link?: string
+    icon?: string
   }>
   promo: {
     title: string

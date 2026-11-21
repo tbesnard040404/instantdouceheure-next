@@ -1,30 +1,34 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 
 const FIN_AFFICHAGE = new Date('2027-02-01T00:00:00+01:00').getTime()
+export const PAGES_BANDEAU = ['/', '/abonnements', '/cadeaux']
+
+export function bandeauActif(pathname: string | null) {
+  return Date.now() < FIN_AFFICHAGE && PAGES_BANDEAU.includes(pathname ?? '')
+}
+
+function Messages({ copie }: { copie?: boolean }) {
+  const tab = copie ? -1 : undefined
+  return (
+    <span className="bandeau__group" aria-hidden={copie || undefined}>
+      <strong className="bandeau__tag">Nouveauté !</strong>
+      <Link href="/abonnements#lessentiel" tabIndex={tab}>Un abonnement pour petit budget à 46&nbsp;€/mois</Link>
+      <span className="bandeau__sep" aria-hidden="true">✦</span>
+      <Link href="/ateliers#bien-etre-a-deux" tabIndex={tab}>Un nouvel atelier fait son apparition : bien-être à deux&nbsp;!</Link>
+      <span className="bandeau__sep" aria-hidden="true">✦</span>
+    </span>
+  )
+}
 
 export function NouveautesBanner() {
-  const [expiree, setExpiree] = useState(Date.now() >= FIN_AFFICHAGE)
-
-  useEffect(() => {
-    setExpiree(Date.now() >= FIN_AFFICHAGE)
-  }, [])
-
-  if (expiree) return null
-
   return (
-    <aside className="nouveautes" aria-label="Nouveautés">
-      <p className="nouveautes__label">Nouveauté !</p>
-      <ul className="nouveautes__list">
-        <li>
-          <Link href="/abonnements#lessentiel">Un abonnement pour petit budget à 46&nbsp;€/mois</Link>
-        </li>
-        <li>
-          <Link href="/ateliers#bien-etre-a-deux">Un nouvel atelier fait son apparition : bien-être à deux !</Link>
-        </li>
-      </ul>
+    <aside className="bandeau" aria-label="Nouveautés">
+      <div className="bandeau__track">
+        <Messages />
+        <Messages copie />
+      </div>
     </aside>
   )
 }

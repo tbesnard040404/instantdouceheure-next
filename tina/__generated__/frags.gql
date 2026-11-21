@@ -99,6 +99,25 @@ fragment AteliersParts on Ateliers {
   introEyebrow
   introTitle
   introText
+  cabinet {
+    __typename
+    visible
+    eyebrow
+    title
+    text
+    details {
+      __typename
+      label
+      value
+    }
+    includesTitle
+    includes
+    activitiesTitle
+    activities
+    ctaLabel
+    ctaLink
+    emailSubject
+  }
   items {
     __typename
     title
@@ -106,6 +125,8 @@ fragment AteliersParts on Ateliers {
     priceUnit
     desc
     date
+    link
+    icon
   }
   promo {
     __typename

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { RevealWrapper } from '@/components/ui/RevealWrapper'
-import { NouveautesBanner } from '@/components/sections/NouveautesBanner'
 import { getHomeContent, getRetraitesContent, getSiteSettings } from '@/lib/content'
 
 // SVG illustrations inline (zéro dépendance externe)
@@ -62,7 +61,6 @@ export default function HomePage() {
         <div className="hero__bg" aria-hidden="true" />
         <div className="container">
           <div className="hero__content">
-            <NouveautesBanner />
             <p className="hero__eyebrow">{c.hero.eyebrow}</p>
             <h1 className="hero__title">
               {c.hero.title.split("'")[0]}&apos;<br /><em>{c.hero.title.split("'")[1] ?? ''}</em>

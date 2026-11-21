@@ -583,6 +583,28 @@ export type AbonnementsConnection = Connection & {
   edges?: Maybe<Array<Maybe<AbonnementsConnectionEdges>>>;
 };
 
+export type AteliersCabinetDetails = {
+  __typename?: 'AteliersCabinetDetails';
+  label?: Maybe<Scalars['String']['output']>;
+  value?: Maybe<Scalars['String']['output']>;
+};
+
+export type AteliersCabinet = {
+  __typename?: 'AteliersCabinet';
+  visible?: Maybe<Scalars['Boolean']['output']>;
+  eyebrow?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  text?: Maybe<Scalars['String']['output']>;
+  details?: Maybe<Array<Maybe<AteliersCabinetDetails>>>;
+  includesTitle?: Maybe<Scalars['String']['output']>;
+  includes?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  activitiesTitle?: Maybe<Scalars['String']['output']>;
+  activities?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  ctaLabel?: Maybe<Scalars['String']['output']>;
+  ctaLink?: Maybe<Scalars['String']['output']>;
+  emailSubject?: Maybe<Scalars['String']['output']>;
+};
+
 export type AteliersItems = {
   __typename?: 'AteliersItems';
   title?: Maybe<Scalars['String']['output']>;
@@ -590,6 +612,8 @@ export type AteliersItems = {
   priceUnit?: Maybe<Scalars['String']['output']>;
   desc?: Maybe<Scalars['String']['output']>;
   date?: Maybe<Scalars['String']['output']>;
+  link?: Maybe<Scalars['String']['output']>;
+  icon?: Maybe<Scalars['String']['output']>;
 };
 
 export type AteliersPromo = {
@@ -607,11 +631,32 @@ export type Ateliers = Node & Document & {
   introEyebrow?: Maybe<Scalars['String']['output']>;
   introTitle?: Maybe<Scalars['String']['output']>;
   introText?: Maybe<Scalars['String']['output']>;
+  cabinet?: Maybe<AteliersCabinet>;
   items?: Maybe<Array<Maybe<AteliersItems>>>;
   promo?: Maybe<AteliersPromo>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type AteliersCabinetDetailsFilter = {
+  label?: InputMaybe<StringFilter>;
+  value?: InputMaybe<StringFilter>;
+};
+
+export type AteliersCabinetFilter = {
+  visible?: InputMaybe<BooleanFilter>;
+  eyebrow?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  text?: InputMaybe<StringFilter>;
+  details?: InputMaybe<AteliersCabinetDetailsFilter>;
+  includesTitle?: InputMaybe<StringFilter>;
+  includes?: InputMaybe<StringFilter>;
+  activitiesTitle?: InputMaybe<StringFilter>;
+  activities?: InputMaybe<StringFilter>;
+  ctaLabel?: InputMaybe<StringFilter>;
+  ctaLink?: InputMaybe<StringFilter>;
+  emailSubject?: InputMaybe<StringFilter>;
 };
 
 export type AteliersItemsFilter = {
@@ -620,6 +665,8 @@ export type AteliersItemsFilter = {
   priceUnit?: InputMaybe<StringFilter>;
   desc?: InputMaybe<StringFilter>;
   date?: InputMaybe<StringFilter>;
+  link?: InputMaybe<StringFilter>;
+  icon?: InputMaybe<StringFilter>;
 };
 
 export type AteliersPromoFilter = {
@@ -635,6 +682,7 @@ export type AteliersFilter = {
   introEyebrow?: InputMaybe<StringFilter>;
   introTitle?: InputMaybe<StringFilter>;
   introText?: InputMaybe<StringFilter>;
+  cabinet?: InputMaybe<AteliersCabinetFilter>;
   items?: InputMaybe<AteliersItemsFilter>;
   promo?: InputMaybe<AteliersPromoFilter>;
 };
@@ -1193,12 +1241,34 @@ export type AbonnementsMutation = {
   plans?: InputMaybe<Array<InputMaybe<AbonnementsPlansMutation>>>;
 };
 
+export type AteliersCabinetDetailsMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  value?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type AteliersCabinetMutation = {
+  visible?: InputMaybe<Scalars['Boolean']['input']>;
+  eyebrow?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  text?: InputMaybe<Scalars['String']['input']>;
+  details?: InputMaybe<Array<InputMaybe<AteliersCabinetDetailsMutation>>>;
+  includesTitle?: InputMaybe<Scalars['String']['input']>;
+  includes?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  activitiesTitle?: InputMaybe<Scalars['String']['input']>;
+  activities?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  ctaLabel?: InputMaybe<Scalars['String']['input']>;
+  ctaLink?: InputMaybe<Scalars['String']['input']>;
+  emailSubject?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type AteliersItemsMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   price?: InputMaybe<Scalars['String']['input']>;
   priceUnit?: InputMaybe<Scalars['String']['input']>;
   desc?: InputMaybe<Scalars['String']['input']>;
   date?: InputMaybe<Scalars['String']['input']>;
+  link?: InputMaybe<Scalars['String']['input']>;
+  icon?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type AteliersPromoMutation = {
@@ -1214,6 +1284,7 @@ export type AteliersMutation = {
   introEyebrow?: InputMaybe<Scalars['String']['input']>;
   introTitle?: InputMaybe<Scalars['String']['input']>;
   introText?: InputMaybe<Scalars['String']['input']>;
+  cabinet?: InputMaybe<AteliersCabinetMutation>;
   items?: InputMaybe<Array<InputMaybe<AteliersItemsMutation>>>;
   promo?: InputMaybe<AteliersPromoMutation>;
 };
@@ -1410,12 +1481,34 @@ export type AbonnementsFilter = {
   plans?: AbonnementsPlansFilter | null | undefined;
 };
 
+export type AteliersCabinetDetailsFilter = {
+  label?: StringFilter | null | undefined;
+  value?: StringFilter | null | undefined;
+};
+
+export type AteliersCabinetFilter = {
+  visible?: BooleanFilter | null | undefined;
+  eyebrow?: StringFilter | null | undefined;
+  title?: StringFilter | null | undefined;
+  text?: StringFilter | null | undefined;
+  details?: AteliersCabinetDetailsFilter | null | undefined;
+  includesTitle?: StringFilter | null | undefined;
+  includes?: StringFilter | null | undefined;
+  activitiesTitle?: StringFilter | null | undefined;
+  activities?: StringFilter | null | undefined;
+  ctaLabel?: StringFilter | null | undefined;
+  ctaLink?: StringFilter | null | undefined;
+  emailSubject?: StringFilter | null | undefined;
+};
+
 export type AteliersItemsFilter = {
   title?: StringFilter | null | undefined;
   price?: StringFilter | null | undefined;
   priceUnit?: StringFilter | null | undefined;
   desc?: StringFilter | null | undefined;
   date?: StringFilter | null | undefined;
+  link?: StringFilter | null | undefined;
+  icon?: StringFilter | null | undefined;
 };
 
 export type AteliersPromoFilter = {
@@ -1431,6 +1524,7 @@ export type AteliersFilter = {
   introEyebrow?: StringFilter | null | undefined;
   introTitle?: StringFilter | null | undefined;
   introText?: StringFilter | null | undefined;
+  cabinet?: AteliersCabinetFilter | null | undefined;
   items?: AteliersItemsFilter | null | undefined;
   promo?: AteliersPromoFilter | null | undefined;
 };
@@ -1520,7 +1614,7 @@ export type TarifsPartsFragment = { __typename: 'Tarifs', pageTitle: string | nu
 
 export type AbonnementsPartsFragment = { __typename: 'Abonnements', pageTitle: string | null, pageSubtitle: string | null, sectionTitle: string | null, sectionSubtitle: string | null, plans: Array<{ __typename: 'AbonnementsPlans', name: string | null, price: string | null, period: string | null, desc: string | null, popular: boolean | null, feats: Array<string | null> | null } | null> | null };
 
-export type AteliersPartsFragment = { __typename: 'Ateliers', pageTitle: string | null, pageSubtitle: string | null, introEyebrow: string | null, introTitle: string | null, introText: string | null, items: Array<{ __typename: 'AteliersItems', title: string | null, price: string | null, priceUnit: string | null, desc: string | null, date: string | null } | null> | null, promo: { __typename: 'AteliersPromo', title: string | null, text: string | null, priceBefore: string | null, priceAfter: string | null } | null };
+export type AteliersPartsFragment = { __typename: 'Ateliers', pageTitle: string | null, pageSubtitle: string | null, introEyebrow: string | null, introTitle: string | null, introText: string | null, cabinet: { __typename: 'AteliersCabinet', visible: boolean | null, eyebrow: string | null, title: string | null, text: string | null, includesTitle: string | null, includes: Array<string | null> | null, activitiesTitle: string | null, activities: Array<string | null> | null, ctaLabel: string | null, ctaLink: string | null, emailSubject: string | null, details: Array<{ __typename: 'AteliersCabinetDetails', label: string | null, value: string | null } | null> | null } | null, items: Array<{ __typename: 'AteliersItems', title: string | null, price: string | null, priceUnit: string | null, desc: string | null, date: string | null, link: string | null, icon: string | null } | null> | null, promo: { __typename: 'AteliersPromo', title: string | null, text: string | null, priceBefore: string | null, priceAfter: string | null } | null };
 
 export type RetraitesPartsFragment = { __typename: 'Retraites', pageTitle: string | null, pageSubtitle: string | null, introEyebrow: string | null, introTitle: string | null, introText: string | null, retreats: Array<{ __typename: 'RetraitesRetreats', tag: string | null, title: string | null, date: string | null, location: string | null, activities: Array<string | null> | null, cta: string | null } | null> | null };
 
@@ -1594,7 +1688,7 @@ export type AteliersQueryVariables = Exact<{
 }>;
 
 
-export type AteliersQuery = { ateliers: { __typename: 'Ateliers', id: string, pageTitle: string | null, pageSubtitle: string | null, introEyebrow: string | null, introTitle: string | null, introText: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, items: Array<{ __typename: 'AteliersItems', title: string | null, price: string | null, priceUnit: string | null, desc: string | null, date: string | null } | null> | null, promo: { __typename: 'AteliersPromo', title: string | null, text: string | null, priceBefore: string | null, priceAfter: string | null } | null } };
+export type AteliersQuery = { ateliers: { __typename: 'Ateliers', id: string, pageTitle: string | null, pageSubtitle: string | null, introEyebrow: string | null, introTitle: string | null, introText: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, cabinet: { __typename: 'AteliersCabinet', visible: boolean | null, eyebrow: string | null, title: string | null, text: string | null, includesTitle: string | null, includes: Array<string | null> | null, activitiesTitle: string | null, activities: Array<string | null> | null, ctaLabel: string | null, ctaLink: string | null, emailSubject: string | null, details: Array<{ __typename: 'AteliersCabinetDetails', label: string | null, value: string | null } | null> | null } | null, items: Array<{ __typename: 'AteliersItems', title: string | null, price: string | null, priceUnit: string | null, desc: string | null, date: string | null, link: string | null, icon: string | null } | null> | null, promo: { __typename: 'AteliersPromo', title: string | null, text: string | null, priceBefore: string | null, priceAfter: string | null } | null } };
 
 export type AteliersConnectionQueryVariables = Exact<{
   before?: string | null | undefined;
@@ -1606,7 +1700,7 @@ export type AteliersConnectionQueryVariables = Exact<{
 }>;
 
 
-export type AteliersConnectionQuery = { ateliersConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Ateliers', id: string, pageTitle: string | null, pageSubtitle: string | null, introEyebrow: string | null, introTitle: string | null, introText: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, items: Array<{ __typename: 'AteliersItems', title: string | null, price: string | null, priceUnit: string | null, desc: string | null, date: string | null } | null> | null, promo: { __typename: 'AteliersPromo', title: string | null, text: string | null, priceBefore: string | null, priceAfter: string | null } | null } | null } | null> | null } };
+export type AteliersConnectionQuery = { ateliersConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Ateliers', id: string, pageTitle: string | null, pageSubtitle: string | null, introEyebrow: string | null, introTitle: string | null, introText: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, cabinet: { __typename: 'AteliersCabinet', visible: boolean | null, eyebrow: string | null, title: string | null, text: string | null, includesTitle: string | null, includes: Array<string | null> | null, activitiesTitle: string | null, activities: Array<string | null> | null, ctaLabel: string | null, ctaLink: string | null, emailSubject: string | null, details: Array<{ __typename: 'AteliersCabinetDetails', label: string | null, value: string | null } | null> | null } | null, items: Array<{ __typename: 'AteliersItems', title: string | null, price: string | null, priceUnit: string | null, desc: string | null, date: string | null, link: string | null, icon: string | null } | null> | null, promo: { __typename: 'AteliersPromo', title: string | null, text: string | null, priceBefore: string | null, priceAfter: string | null } | null } | null } | null> | null } };
 
 export type RetraitesQueryVariables = Exact<{
   relativePath: string;
@@ -1808,6 +1902,25 @@ export const AteliersPartsFragmentDoc = gql`
   introEyebrow
   introTitle
   introText
+  cabinet {
+    __typename
+    visible
+    eyebrow
+    title
+    text
+    details {
+      __typename
+      label
+      value
+    }
+    includesTitle
+    includes
+    activitiesTitle
+    activities
+    ctaLabel
+    ctaLink
+    emailSubject
+  }
   items {
     __typename
     title
@@ -1815,6 +1928,8 @@ export const AteliersPartsFragmentDoc = gql`
     priceUnit
     desc
     date
+    link
+    icon
   }
   promo {
     __typename

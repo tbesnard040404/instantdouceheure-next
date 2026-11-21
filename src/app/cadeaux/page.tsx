@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { NouveautesBanner } from '@/components/sections/NouveautesBanner'
 
 export const metadata = {
   title: "Cartes Cadeaux — Instant Douce'Heure",
@@ -11,7 +10,6 @@ export default function CadeauxPage() {
     <>
       <header className="page-hero">
         <div className="container">
-          <NouveautesBanner />
           <nav className="breadcrumb" aria-label="Fil d'Ariane">
             <Link href="/">Accueil</Link>
             <span className="breadcrumb__sep">›</span>

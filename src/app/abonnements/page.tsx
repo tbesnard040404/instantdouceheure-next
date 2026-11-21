@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { getAbonnementsContent } from '@/lib/content'
-import { NouveautesBanner } from '@/components/sections/NouveautesBanner'
 
 export const metadata = {
   title: "Abonnements Annuels — Instant Douce'Heure",
@@ -24,7 +23,6 @@ export default function AbonnementsPage() {
     <>
       <header className="page-hero">
         <div className="container">
-          <NouveautesBanner />
           <nav className="breadcrumb" aria-label="Fil d'Ariane">
             <Link href="/">Accueil</Link>
             <span className="breadcrumb__sep">›</span>

@@ -210,8 +210,37 @@ var config_default = defineConfig({
           { type: "string", name: "introText", label: "Texte intro", ui: { component: "textarea" } },
           {
             type: "object",
+            name: "cabinet",
+            label: "Atelier au cabinet (encart en haut de page)",
+            fields: [
+              { type: "boolean", name: "visible", label: "Afficher cet encart ?" },
+              { type: "string", name: "eyebrow", label: "\xC9tiquette (ex: Nouveau \xB7 Au cabinet)" },
+              { type: "string", name: "title", label: "Titre" },
+              { type: "string", name: "text", label: "Pr\xE9sentation", ui: { component: "textarea" } },
+              {
+                type: "object",
+                name: "details",
+                label: "Infos pratiques",
+                list: true,
+                ui: { itemProps: (item) => ({ label: item.label ?? "Info" }) },
+                fields: [
+                  { type: "string", name: "label", label: "Intitul\xE9 (ex: Quand)" },
+                  { type: "string", name: "value", label: "Contenu" }
+                ]
+              },
+              { type: "string", name: "includesTitle", label: "Titre de la liste \xAB comprend \xBB" },
+              { type: "string", name: "includes", label: "Ce que comprend l\u2019atelier", list: true },
+              { type: "string", name: "activitiesTitle", label: "Titre de la liste des activit\xE9s" },
+              { type: "string", name: "activities", label: "Activit\xE9s au choix", list: true },
+              { type: "string", name: "ctaLabel", label: "Texte du bouton de r\xE9servation" },
+              { type: "string", name: "ctaLink", label: "Lien du bouton (lien Stripe, ou laisser vide pour r\xE9server par email)" },
+              { type: "string", name: "emailSubject", label: "Objet de l\u2019email de r\xE9servation" }
+            ]
+          },
+          {
+            type: "object",
             name: "items",
-            label: "Ateliers (9)",
+            label: "Ateliers nature",
             list: true,
             ui: { itemProps: (item) => ({ label: item.title ?? "Atelier" }) },
             fields: [
@@ -219,7 +248,24 @@ var config_default = defineConfig({
               { type: "string", name: "price", label: "Prix" },
               { type: "string", name: "priceUnit", label: "Unit\xE9 de prix (ex: /personne)" },
               { type: "string", name: "desc", label: "Description", ui: { component: "textarea" } },
-              { type: "string", name: "date", label: "Date(s)" }
+              { type: "string", name: "date", label: "Date(s)" },
+              { type: "string", name: "link", label: "Lien de r\xE9servation (Stripe). Vide = r\xE9servation par email" },
+              {
+                type: "string",
+                name: "icon",
+                label: "Ic\xF4ne",
+                options: [
+                  { value: "bien-etre", label: "Personne (bien-\xEAtre)" },
+                  { value: "tente", label: "Tente" },
+                  { value: "feuille", label: "Feuille" },
+                  { value: "pousse", label: "Pousse en pot" },
+                  { value: "fleur", label: "Fleur" },
+                  { value: "coeur", label: "C\u0153ur" },
+                  { value: "lotus", label: "Lotus" },
+                  { value: "arbre", label: "Arbre" },
+                  { value: "mains", label: "Mains" }
+                ]
+              }
             ]
           },
           {

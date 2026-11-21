@@ -4,69 +4,125 @@
   "introEyebrow": "Le projet Ve'j'tal",
   "introTitle": "Un terrain de 2 500 m²\nau cœur de la forêt normande",
   "introText": "Cela fait près de 15 ans que je réfléchis à un projet comme celui là, il m'a fallu une rencontre et une année pour le concrétiser enfin !\nCette rencontre était celle qui déclenchera tout, trouver la bonne personne, le bon partenaire qui partage les mêmes envies, la même vision et les mêmes valeurs.\nPuis un bout de terrain apparaît de l'autre côté de l'eau, nous l'achetons en février 2025, 3 mois plus tard, quelques coup de pioches, de bêches, une grande dose de créativité et nous voilà entrain d'aménager 2 500 m2 de terrain pour accueillir une dizaine de personnes à la journée.\nJérémy est un amoureux de la nature. Paysagiste depuis 2016, il se passionne pour chaque feuille d'arbre aperçue, mais aussi par la terre qui les nourrit, ou encore le cycle des saisons comme une danse qui rythme ses envies.\nAujourd'hui une nouvelle page s'écrit à travers l'envie de transmettre sa passion et ses connaissances.\n\nTous les ateliers sont co-élaborés par Océane et Jérémy — entre savoir-faire du soin et expertise du vivant végétal, un tandem unique au service de votre bien-être.",
+  "cabinet": {
+    "visible": true,
+    "eyebrow": "Nouveau · Au cabinet",
+    "title": "Atelier bien-être à deux",
+    "text": "Un atelier dédié au bien-être et à la connexion entre deux personnes : en couple, entre ami·e·s ou entre parent et enfant. Il se veut personnalisable et s'adapte à chaque binôme.",
+    "details": [
+      {
+        "label": "Quand",
+        "value": "le premier samedi de chaque mois, de 17h30 à 20h (2h30)"
+      },
+      {
+        "label": "Où",
+        "value": "au cabinet, 23 rue Jules Ancel, 76600 Le Havre"
+      },
+      {
+        "label": "Tarif",
+        "value": "70 € par personne, à réserver pour deux"
+      }
+    ],
+    "includesTitle": "L'atelier comprend",
+    "includes": [
+      "Un rituel de bienvenue",
+      "Un massage pour chacun, au choix : pieds, mains ou crâne",
+      "Un apéro",
+      "3 activités à choisir parmi 5"
+    ],
+    "activitiesTitle": "Les 5 activités proposées",
+    "activities": [
+      "Méditation guidée personnalisée",
+      "Tirage de cartes",
+      "Jeux de confiance",
+      "Jeux de questions-réponses pour se chérir",
+      "Apprendre à se masser : créer une petite routine adaptée au binôme"
+    ],
+    "ctaLabel": "Réserver par email",
+    "ctaLink": "",
+    "emailSubject": "Réservation atelier bien-être à deux"
+  },
   "items": [
     {
       "title": "Atelier Bien-être",
       "price": "80€",
       "priceUnit": "/personne",
       "desc": "Sport, méditation, relaxation et massages. Journée de 9h à 17h avec déjeuner végétarien.",
-      "date": "📅 27 juin · 18 juillet · 5 sept. 2026"
+      "date": "📅 27 juin · 18 juillet · 5 sept. 2026",
+      "link": "https://book.stripe.com/aFa9ATcI88sbcvW0Wy6c00e",
+      "icon": "bien-etre"
     },
     {
       "title": "Week-end Nature",
       "price": "150€",
       "priceUnit": "/2 jours",
       "desc": "Randonnée, création intuitive, écriture, dessin, méditation, feu de camp et nuit en tente.",
-      "date": "📅 15–16 août 2026"
+      "date": "📅 15–16 août 2026",
+      "link": "https://book.stripe.com/6oUcN5bE4bEn2VmbBc6c00b",
+      "icon": "tente"
     },
     {
       "title": "Atelier Balade Nature",
       "price": "60€",
       "priceUnit": "adulte · 20€ enfant",
       "desc": "Jeux en plein air, randonnée, connexion à la nature, découverte des plantes comestibles.",
-      "date": "📅 6 juin 2026"
+      "date": "📅 6 juin 2026",
+      "link": "https://book.stripe.com/bJe7sLbE4fUD8fGdJk6c00a",
+      "icon": "feuille"
     },
     {
       "title": "Atelier Jardin",
       "price": "60€",
       "priceUnit": "/personne",
       "desc": "Compostage, potager, taille, techniques durables et respectueuses de l'environnement.",
-      "date": "📅 17 mai · 21 juin 2026"
+      "date": "📅 17 mai · 21 juin 2026",
+      "link": "https://book.stripe.com/3cI00jeQgfUD9jKfRs6c009",
+      "icon": "pousse"
     },
     {
       "title": "Atelier Déco Nature",
       "price": "60€",
       "priceUnit": "/personne",
       "desc": "Création avec matériaux naturels, land art et expression artistique au fil de l'imagination.",
-      "date": "📅 30 mai · 28 juin 2026"
+      "date": "📅 30 mai · 28 juin 2026",
+      "link": "https://book.stripe.com/14A28r8rSeQz0Ne20C6c007",
+      "icon": "fleur"
     },
     {
       "title": "Apaiser le Cœur",
       "price": "60€",
       "priceUnit": "/personne",
       "desc": "Relaxation en forêt, création d'une statue Jizo, exercices en binôme, cérémonie cacao.",
-      "date": "📅 8 août 2026"
+      "date": "📅 8 août 2026",
+      "link": "https://book.stripe.com/7sYeVd5fG5fZanOax86c005",
+      "icon": "coeur"
     },
     {
       "title": "Connexion à Soi",
       "price": "60€",
       "priceUnit": "/personne",
       "desc": "Massage, soins énergétiques, exercices d'écriture des ombres et méditation guidée.",
-      "date": "📅 23 mai 2026"
+      "date": "📅 23 mai 2026",
+      "link": "https://book.stripe.com/7sYcN5bE4eQzgMc9t46c004",
+      "icon": "lotus"
     },
     {
       "title": "Connexion à la Nature",
       "price": "60€",
       "priceUnit": "/personne",
       "desc": "Marche sensorielle, méditation en forêt, travail créatif, connexion aux éléments naturels.",
-      "date": "📅 20 juin 2026"
+      "date": "📅 20 juin 2026",
+      "link": "https://book.stripe.com/4gM3cvaA05fZanO5cO6c003",
+      "icon": "arbre"
     },
     {
       "title": "Connexion à l'Autre",
       "price": "60€",
       "priceUnit": "/personne",
       "desc": "Initiation aux soins énergétiques, écoute intuitive, exercices de confiance et travail en binôme.",
-      "date": "📅 11 juillet 2026"
+      "date": "📅 11 juillet 2026",
+      "link": "https://book.stripe.com/eVq7sLeQgdMv67ydJk6c002",
+      "icon": "mains"
     }
   ],
   "promo": {

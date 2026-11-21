@@ -110,6 +110,25 @@ export const AteliersPartsFragmentDoc = gql`
   introEyebrow
   introTitle
   introText
+  cabinet {
+    __typename
+    visible
+    eyebrow
+    title
+    text
+    details {
+      __typename
+      label
+      value
+    }
+    includesTitle
+    includes
+    activitiesTitle
+    activities
+    ctaLabel
+    ctaLink
+    emailSubject
+  }
   items {
     __typename
     title
@@ -117,6 +136,8 @@ export const AteliersPartsFragmentDoc = gql`
     priceUnit
     desc
     date
+    link
+    icon
   }
   promo {
     __typename

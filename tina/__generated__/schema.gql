@@ -367,12 +367,34 @@ type AbonnementsConnection implements Connection {
   edges: [AbonnementsConnectionEdges]
 }
 
+type AteliersCabinetDetails {
+  label: String
+  value: String
+}
+
+type AteliersCabinet {
+  visible: Boolean
+  eyebrow: String
+  title: String
+  text: String
+  details: [AteliersCabinetDetails]
+  includesTitle: String
+  includes: [String]
+  activitiesTitle: String
+  activities: [String]
+  ctaLabel: String
+  ctaLink: String
+  emailSubject: String
+}
+
 type AteliersItems {
   title: String
   price: String
   priceUnit: String
   desc: String
   date: String
+  link: String
+  icon: String
 }
 
 type AteliersPromo {
@@ -388,11 +410,32 @@ type Ateliers implements Node & Document {
   introEyebrow: String
   introTitle: String
   introText: String
+  cabinet: AteliersCabinet
   items: [AteliersItems]
   promo: AteliersPromo
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input AteliersCabinetDetailsFilter {
+  label: StringFilter
+  value: StringFilter
+}
+
+input AteliersCabinetFilter {
+  visible: BooleanFilter
+  eyebrow: StringFilter
+  title: StringFilter
+  text: StringFilter
+  details: AteliersCabinetDetailsFilter
+  includesTitle: StringFilter
+  includes: StringFilter
+  activitiesTitle: StringFilter
+  activities: StringFilter
+  ctaLabel: StringFilter
+  ctaLink: StringFilter
+  emailSubject: StringFilter
 }
 
 input AteliersItemsFilter {
@@ -401,6 +444,8 @@ input AteliersItemsFilter {
   priceUnit: StringFilter
   desc: StringFilter
   date: StringFilter
+  link: StringFilter
+  icon: StringFilter
 }
 
 input AteliersPromoFilter {
@@ -416,6 +461,7 @@ input AteliersFilter {
   introEyebrow: StringFilter
   introTitle: StringFilter
   introText: StringFilter
+  cabinet: AteliersCabinetFilter
   items: AteliersItemsFilter
   promo: AteliersPromoFilter
 }
@@ -811,12 +857,34 @@ input AbonnementsMutation {
   plans: [AbonnementsPlansMutation]
 }
 
+input AteliersCabinetDetailsMutation {
+  label: String
+  value: String
+}
+
+input AteliersCabinetMutation {
+  visible: Boolean
+  eyebrow: String
+  title: String
+  text: String
+  details: [AteliersCabinetDetailsMutation]
+  includesTitle: String
+  includes: [String]
+  activitiesTitle: String
+  activities: [String]
+  ctaLabel: String
+  ctaLink: String
+  emailSubject: String
+}
+
 input AteliersItemsMutation {
   title: String
   price: String
   priceUnit: String
   desc: String
   date: String
+  link: String
+  icon: String
 }
 
 input AteliersPromoMutation {
@@ -832,6 +900,7 @@ input AteliersMutation {
   introEyebrow: String
   introTitle: String
   introText: String
+  cabinet: AteliersCabinetMutation
   items: [AteliersItemsMutation]
   promo: AteliersPromoMutation
 }

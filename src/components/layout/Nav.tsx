@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { NouveautesBanner, bandeauActif } from '@/components/sections/NouveautesBanner'
 
 const links = [
   { href: '/', label: 'Accueil' },
@@ -33,12 +34,15 @@ export function Nav() {
   // Ferme le menu mobile quand on change de page
   useEffect(() => { setOpen(false) }, [pathname])
 
+  const bandeau = bandeauActif(pathname)
+
   return (
     <>
+      {bandeau && <NouveautesBanner />}
       <nav
         id="nav"
         aria-label="Navigation principale"
-        className={`nav${scrolled ? ' scrolled' : ''}`}
+        className={`nav${scrolled ? ' scrolled' : ''}${bandeau ? ' nav--bandeau' : ''}`}
       >
         <div className="container">
           <div className="nav__inner">
