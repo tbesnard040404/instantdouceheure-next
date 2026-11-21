@@ -3,6 +3,7 @@
 import Link from 'next/link'
 
 const FIN_AFFICHAGE = new Date('2027-02-01T00:00:00+01:00').getTime()
+const COPIES = 6
 export const PAGES_BANDEAU = ['/', '/abonnements', '/cadeaux']
 
 export function bandeauActif(pathname: string | null) {
@@ -26,8 +27,7 @@ export function NouveautesBanner() {
   return (
     <aside className="bandeau" aria-label="Nouveautés">
       <div className="bandeau__track">
-        <Messages />
-        <Messages copie />
+        {Array.from({ length: COPIES }, (_, i) => <Messages key={i} copie={i > 0} />)}
       </div>
     </aside>
   )

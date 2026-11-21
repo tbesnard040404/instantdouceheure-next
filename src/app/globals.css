@@ -370,8 +370,8 @@ a:hover { color:var(--sand); }
 /* Bandeau nouveautés (jusqu'au 31/01/2027) */
 :root { --bandeau-h: 2.25rem; }
 .bandeau { position:fixed; top:0; left:0; right:0; z-index:201; height:var(--bandeau-h); overflow:hidden; background:var(--sand); color:var(--forest-deep); display:flex; align-items:center; font-size:.875rem; }
-.bandeau__track { display:flex; width:max-content; animation:bandeau-defile 32s linear infinite; }
-.bandeau:hover .bandeau__track, .bandeau:focus-within .bandeau__track { animation-play-state:paused; }
+.bandeau__track { display:flex; width:max-content; animation:bandeau-defile 30s linear infinite; }
+.bandeau:focus-within .bandeau__track { animation-play-state:paused; }
 .bandeau__group { display:flex; align-items:center; gap:1.25rem; padding-right:1.25rem; white-space:nowrap; }
 .bandeau__tag { text-transform:uppercase; letter-spacing:.1em; font-size:.75rem; }
 .bandeau a { color:var(--forest-deep); font-weight:500; text-decoration:underline; text-decoration-color:rgba(26,44,36,.35); text-underline-offset:3px; padding:.375rem 0; }
@@ -379,7 +379,7 @@ a:hover { color:var(--sand); }
 .bandeau a:focus-visible { outline:2px solid var(--forest-deep); outline-offset:2px; border-radius:3px; }
 .bandeau__sep { opacity:.55; font-size:.7rem; }
 .nav.nav--bandeau { top:var(--bandeau-h); }
-@keyframes bandeau-defile { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+@keyframes bandeau-defile { from { transform:translateX(0); } to { transform:translateX(calc(-100% / 6)); } }
 @media (prefers-reduced-motion: reduce) {
   .bandeau__track { animation:none; width:100%; justify-content:center; }
   .bandeau__group[aria-hidden="true"] { display:none; }
